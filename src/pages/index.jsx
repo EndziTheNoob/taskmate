@@ -32,7 +32,7 @@ export default function Home() {
             <br />
             Are you ready?
           </p>
-          <Link href="/setting.jsx" className={styles.buttonStart}>
+          <Link href="/setting" className={styles.buttonStart}>
             Start
           </Link>
         </div>
