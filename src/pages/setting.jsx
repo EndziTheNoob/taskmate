@@ -25,7 +25,7 @@ const Setting = () => {
         <Link href="/" className={styles.buttonStart}>
           back
         </Link>
-        <Link href="/setting" className={styles.buttonStart}>
+        <Link href="/todolist" className={styles.buttonStart}>
           next
         </Link>
       </div>
