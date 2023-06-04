@@ -1,5 +1,5 @@
 import '@/styles/globals.css';
-import Footer from './Footer.jsx';
+import Footer from '../components/Footer/Footer.jsx';
 
 export default function App({ Component, pageProps }) {
   return (

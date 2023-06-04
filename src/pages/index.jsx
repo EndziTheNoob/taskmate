@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-import Footer from './Footer.jsx';
+import Footer from '../components/Footer/Footer.jsx';
+import Link from 'next/link';
 
 // uprava fontu
 const inter = Inter({ subsets: ['latin'] });
@@ -31,7 +32,9 @@ export default function Home() {
             <br />
             Are you ready?
           </p>
-          <a className={styles.buttonStart}>Start</a>
+          <Link href="/setting.jsx" className={styles.buttonStart}>
+            Start
+          </Link>
         </div>
       </main>
       <Footer />
