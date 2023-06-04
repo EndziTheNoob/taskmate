@@ -1,8 +1,15 @@
 import React from 'react';
 import styles from '@/styles/Home.module.css';
+import Menu from '../components/Menu/Menu.jsx';
 
 const Todolist = () => {
-  return <div className={styles.setting}>ahoj</div>;
+  return (
+    <div className={styles.setting}>
+      <nav className={styles.hamburgerMenu}>
+        <Menu />
+      </nav>
+    </div>
+  );
 };
 
 export default Todolist;
