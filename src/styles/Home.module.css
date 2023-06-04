@@ -56,6 +56,7 @@
   border-radius: 12px;
   width: 10rem;
   cursor: pointer;
+  font-family: var(--font-mono);
 }
 
 .buttonStart:hover {
@@ -67,6 +68,69 @@
   background-color: #F4EDF9;
   transform: translateY(5px);
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B6ACBD;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  height: 3rem;
+  text-align: center;
+  padding: 0;
+}
+
+.footer p {
+  color: rgb(77, 77, 77);
+  font-size: 0.8rem;
+  font-family: 'Krona One', sans-serif;
+}
+
+.taskmateHomepage {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+}
+
+/* Setting page */
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.inputButton {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border: black solid 0.2rem;
+  box-shadow: -3px 4px rgb(129, 129, 129);
+  border-radius: 12px;
+  width: 15rem;
+  height: 3rem;
+  font-family: var(--font-mono);
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.taskmateSetting {
+  position: absolute;
+  bottom: 3rem;
+}
+
 
 /* Mobile */
 @media (max-width: 700px) {
@@ -135,24 +199,4 @@
   to {
     transform: rotate(0deg);
   }
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #B6ACBD;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  height: 3rem;
-  text-align: center;
-  padding: 0;
-}
-
-.footer p {
-  color: rgb(77, 77, 77);
-  font-size: 0.8rem;
-  font-family: 'Krona One', sans-serif;
 }

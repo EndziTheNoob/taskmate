@@ -36,6 +36,14 @@ export default function Home() {
             Start
           </Link>
         </div>
+        <Image
+          src="/Taskmate_Kafe.gif"
+          alt="taskmate"
+          className={styles.taskmateHomepage}
+          width={300}
+          height={300}
+          priority
+        />
       </main>
       <Footer />
     </>
