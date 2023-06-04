@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '@/styles/Home.module.css';
 import Menu from '../components/Menu/Menu.jsx';
+import Image from 'next/image';
 
 const Todolist = () => {
   return (
@@ -8,6 +9,14 @@ const Todolist = () => {
       <nav className={styles.hamburgerMenu}>
         <Menu />
       </nav>
+      <Image
+        src="/Taskmate_Mrk.gif"
+        alt="taskmate2"
+        className={styles.taskmateTodo}
+        width={300}
+        height={300}
+        priority
+      />
     </div>
   );
 };
