@@ -28,3 +28,23 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B6ACBD;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  height: 3rem;
+  text-align: center;
+  padding: 0;
+}
+
+.footer p {
+  color: rgb(77, 77, 77);
+  font-size: 0.8rem;
+  font-family: 'Krona One', sans-serif;
+}

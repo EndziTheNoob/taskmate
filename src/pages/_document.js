@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import Footer from '../components/Footer/Footer.jsx';
+import Footer from '../components/Footer/index.js';
 
 export default function Document() {
   return (
