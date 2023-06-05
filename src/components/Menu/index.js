@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import HamburgerMenu from 'react-hamburger-menu';
 import Link from 'next/link';
-import styles from '@/styles/Home.module.css';
+import styles from './menu.module.css';
 
-const Menu = () => {
+export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -11,7 +11,7 @@ const Menu = () => {
   };
 
   return (
-    <div>
+    <div className={styles.HamburgerMenu}>
       <HamburgerMenu
         isOpen={isOpen}
         menuClicked={handleClick}
@@ -32,6 +32,4 @@ const Menu = () => {
       )}
     </div>
   );
-};
-
-export default Menu;
+}

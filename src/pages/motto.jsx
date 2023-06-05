@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '@/styles/Home.module.css';
-import Menu from '../components/Menu/Menu.jsx';
+import Menu from '../components/Menu/index.js';
 
 const Motto = () => {
   return (

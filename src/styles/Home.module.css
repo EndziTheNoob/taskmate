@@ -105,29 +105,8 @@
   left: 2rem;
 }
 
-/* Hamburger menu */
-
 .hamburgerMenu {
   position: absolute;
   top: 1rem;
   left: 1rem;
-}
-
-.hamburgerContainer {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: black;
-  font-size: 0.8rem;
-  background-color: white;
-  padding: 0.5rem 2rem;
-  border: black solid 0.2rem;
-  box-shadow: -3px 4px rgb(129, 129, 129);
-  border-radius: 12px;
-  width: 8rem;
-  height: 10rem;
-  cursor: pointer;
-  font-family: var(--font-mono);
-  margin-top: 1rem;
-  justify-content: space-evenly;
 }
