@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import HamburgerMenu from 'react-hamburger-menu';
 import Link from 'next/link';
-import styles from './menu.module.css';
+import styles from './Index.module.css';
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);

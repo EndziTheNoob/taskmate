@@ -1,8 +1,7 @@
-import React from 'react';
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/Index.module.css';
 import Menu from '../components/Menu/index.js';
 
-const Donelist = () => {
+export default function Motto() {
   return (
     <div className={styles.setting}>
       <nav className={styles.hamburgerMenu}>
@@ -10,6 +9,4 @@ const Donelist = () => {
       </nav>
     </div>
   );
-};
-
-export default Donelist;
+}

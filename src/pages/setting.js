@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/Index.module.css';
 import Image from 'next/image';
 
-const Setting = () => {
+export default function Setting() {
   return (
     <div className={styles.setting}>
       <form>
@@ -31,6 +30,4 @@ const Setting = () => {
       </div>
     </div>
   );
-};
-
-export default Setting;
+}

@@ -1,9 +1,8 @@
-import React from 'react';
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/Index.module.css';
 import Menu from '../components/Menu/index.js';
 import Image from 'next/image';
 
-const Todolist = () => {
+export default function Todolist() {
   return (
     <div className={styles.setting}>
       <nav className={styles.hamburgerMenu}>
@@ -19,6 +18,4 @@ const Todolist = () => {
       />
     </div>
   );
-};
-
-export default Todolist;
+}
