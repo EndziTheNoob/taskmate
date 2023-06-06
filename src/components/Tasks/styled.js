@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledTasks = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #b6acbd;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  height: 3rem;
-  text-align: center;
-  padding: 0;
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  height: 20rem;
 `;
