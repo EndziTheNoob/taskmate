@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import HamburgerMenu from 'react-hamburger-menu';
 import Link from 'next/link';
-import styles from './Index.module.css';
+import { FooterStyle, MenuStyle } from './styled';
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function Menu() {
   };
 
   return (
-    <div className={styles.HamburgerMenu}>
+    <div>
       <HamburgerMenu
         isOpen={isOpen}
         menuClicked={handleClick}
@@ -24,11 +24,11 @@ export default function Menu() {
         animationDuration={0.5}
       />
       {isOpen && (
-        <div className={styles.hamburgerContainer}>
+        <MenuStyle>
           <Link href="/todolist">tasks</Link>
           <Link href="/donelist">done</Link>
           <Link href="/motto">motto</Link>
-        </div>
+        </MenuStyle>
       )}
     </div>
   );

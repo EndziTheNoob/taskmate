@@ -1,4 +1,11 @@
-.hamburgerContainer {
+import styled from 'styled-components';
+
+const Palette = {
+  purple_light: '#b6acbd',
+  gray_dark: '#666666',
+};
+
+export const MenuStyle = styled.div`
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -15,4 +22,4 @@
   font-family: var(--font-mono);
   margin-top: 1rem;
   justify-content: space-evenly;
-}
+`;
