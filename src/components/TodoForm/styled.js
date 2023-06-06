@@ -1,8 +1,10 @@
-.footer {
+import styled from 'styled-components';
+
+export const StyledTodoForm = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #B6ACBD;
+  background-color: #b6acbd;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -10,10 +12,4 @@
   height: 3rem;
   text-align: center;
   padding: 0;
-}
-
-.footer p {
-  color: rgb(77, 77, 77);
-  font-size: 0.8rem;
-  font-family: 'Krona One', sans-serif;
-}
+`;

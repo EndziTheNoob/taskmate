@@ -8,6 +8,7 @@ export default function Todolist() {
       <nav className={styles.hamburgerMenu}>
         <Menu />
       </nav>
+
       <Image
         src="/Taskmate_Mrk.gif"
         alt="taskmate2"
