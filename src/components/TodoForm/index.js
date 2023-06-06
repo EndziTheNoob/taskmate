@@ -1,9 +1,22 @@
 import { StyledTodoForm } from './styled';
 
-export default function TodoForm() {
+export default function TodoForm({ addTodo }) {
+  const [text, setText] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!text) return;
+    addTodo(text);
+    setText('');
+  };
   return (
-    <StyledTodoForm>
-      <input type="text" placeholder="Add Todo..." />
+    <StyledTodoForm onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Add Todo..."
+      />
     </StyledTodoForm>
   );
 }
