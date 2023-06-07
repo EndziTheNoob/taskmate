@@ -2,6 +2,11 @@ import Menu from '../components/Menu/index.js';
 import { useState } from 'react';
 import styled from 'styled-components';
 
+const Palette = {
+  purple_light: '#F4EDF9',
+  gray_dark: '#666666',
+};
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -64,7 +69,6 @@ const DeleteButton = styled.button`
 
 const Input = styled.input`
   padding: 10px;
-  margin-left: 1rem;
   text-decoration: none;
   color: black;
   font-size: 0.8rem;
@@ -90,10 +94,28 @@ const InputContainer = styled.div`
 `;
 
 const AddButton = styled.button`
-  background-color: transparent;
+  background-color: ${Palette.purple_light};
   border: none;
   cursor: pointer;
   font-size: 1.8rem;
+  position: fixed;
+  right: 2rem;
+  bottom: 5rem;
+  border: black solid 0.1rem;
+  box-shadow: -3px 4px rgb(129, 129, 129);
+  border-radius: 8px;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  &:hover {
+    background-color: #f4edf9;
+    transform: translateY(5px);
+  }
+
+  &:active {
+    background-color: #f4edf9;
+    transform: translateY(5px);
+  }
 `;
 
 const TaskmateTodo = styled.img`
@@ -144,7 +166,6 @@ export default function TodoApp() {
       </nav>
       <Container>
         <InputContainer>
-          <AddButton onClick={handleAddTask}>+</AddButton>
           <Input
             type="text"
             value={newTask}
@@ -177,6 +198,7 @@ export default function TodoApp() {
             </Task>
           ))}
         </TaskList>
+        <AddButton onClick={handleAddTask}>+</AddButton>
         <TaskmateTodo
           src="/img/Taskmate_Kafe.gif"
           alt="taskmate2"
