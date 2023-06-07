@@ -1,6 +1,7 @@
 import Menu from '../components/Menu/index.js';
 import { useState } from 'react';
 import styled from 'styled-components';
+import Footer from '../components/Footer/index.js';
 
 const Palette = {
   purple_light: '#F4EDF9',
@@ -206,6 +207,7 @@ export default function TodoApp() {
           height={300}
         />
       </Container>
+      <Footer />
     </>
   );
 }
