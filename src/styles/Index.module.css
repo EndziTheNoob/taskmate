@@ -72,19 +72,6 @@
   min-height: 100vh;
 }
 
-.inputButton {
-  text-decoration: none;
-  color: black;
-  font-size: 0.8rem;
-  background-color: white;
-  padding: 0.5rem 2rem;
-  border: black solid 0.2rem;
-  box-shadow: -3px 4px rgb(129, 129, 129);
-  border-radius: 12px;
-  width: 15rem;
-  height: 3rem;
-  font-family: var(--font-mono);
-}
 
 .buttonsContainer {
   display: flex;

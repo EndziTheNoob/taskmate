@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from '@/styles/Index.module.css';
 import Image from 'next/image';
 import Head from 'next/head';
+import NameForm from '@/components/NameForm';
 
 export default function Setting() {
   return (
@@ -10,13 +11,7 @@ export default function Setting() {
         <title>User profile</title>
       </Head>
       <div className={styles.setting}>
-        <form>
-          <input
-            type="text"
-            placeholder="enter your name"
-            className={styles.inputButton}
-          />
-        </form>
+        <NameForm />
         <Image
           src="/Taskmate_Mrk.gif"
           alt="taskmate2"
