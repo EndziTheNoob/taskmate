@@ -39,6 +39,23 @@ const Task = styled.li`
   height: 2rem;
 `;
 
+const Checkbox = styled.input.attrs({ type: 'checkbox' })`
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 100%;
+  margin-right: 0.8rem;
+  margin-left: -1rem;
+  background-color: white;
+  cursor: pointer;
+ 
+  &:checked {
+
+  }
+  }
+`;
+
 const DeleteButton = styled.button`
   background-color: transparent;
   border: none;
@@ -59,6 +76,10 @@ const Input = styled.input`
   font-family: var(--font-todolist);
   width: 100%;
   height: 2rem;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const InputContainer = styled.div`
@@ -136,7 +157,7 @@ export default function TodoApp() {
           {tasks.map((task, index) => (
             <Task key={index}>
               <div>
-                <input
+                <Checkbox
                   type="checkbox"
                   checked={task.done}
                   onChange={() => handleToggleTask(index)}
@@ -144,7 +165,7 @@ export default function TodoApp() {
                 <span
                   style={{
                     textDecoration: task.done ? 'line-through' : 'none',
-                    color: task.done ? 'gray' : 'black',
+                    color: task.done ? 'darkgray' : 'black',
                   }}
                 >
                   {task.title}
