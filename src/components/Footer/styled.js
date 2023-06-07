@@ -18,9 +18,9 @@ export const FooterStyle = styled.div`
   text-align: center;
   padding: 0;
 
-  & > p = {
+  & > p {
     color: ${Palette.gray_dark};
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     font-family: 'Krona One', sans-serif;
   }
 `;

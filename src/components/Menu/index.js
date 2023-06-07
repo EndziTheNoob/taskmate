@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import HamburgerMenu from 'react-hamburger-menu';
 import Link from 'next/link';
-import { FooterStyle, MenuStyle } from './styled';
+import { MenuStyle } from './styled';
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
