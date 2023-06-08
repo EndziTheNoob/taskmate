@@ -1,10 +1,20 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Palette = {
   purple_light: '#b6acbd',
   gray_dark: '#666666',
 };
 
+const unfoldAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 export const MenuStyle = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,4 +32,12 @@ export const MenuStyle = styled.div`
   font-family: var(--font-mono);
   margin-top: 1rem;
   justify-content: space-evenly;
+  animation: ${unfoldAnimation} 0.3s ease-in-out;
+`;
+
+export const HamburgerContainer = styled.div`
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  cursor: pointer;
 `;
