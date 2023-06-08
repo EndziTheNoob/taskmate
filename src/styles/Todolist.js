@@ -117,6 +117,7 @@ export const AddButton = styled.button`
 
 export const TaskmateTodo = styled.img`
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   left: 2rem;
+  z-index: 1;
 `;

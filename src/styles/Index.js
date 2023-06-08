@@ -58,6 +58,7 @@ transform: translateY(5px);
 
 export const TaskmateHomepage = styled.img`
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   left: 2rem;
+  z-index: 1;
 `;
