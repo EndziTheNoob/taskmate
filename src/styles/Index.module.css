@@ -84,14 +84,6 @@
   bottom: 3rem;
 }
 
-/* Todo list */
-
-.taskmateTodo {
-  position: absolute;
-  bottom: 3rem;
-  left: 2rem;
-}
-
 .hamburgerMenu {
   position: absolute;
   top: 1rem;

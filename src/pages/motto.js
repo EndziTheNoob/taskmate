@@ -1,10 +1,6 @@
-import styled from 'styled-components';
 import Menu from '../components/Menu/index.js';
 import Head from 'next/head.js';
-
-export const Heading = styled.h1`
-  color: blue;
-`;
+import { Clouds, CloudsContainer } from '../styles/Motto.js';
 
 export default function Motto() {
   return (
@@ -16,7 +12,9 @@ export default function Motto() {
         <nav>
           <Menu />
         </nav>
-        <Heading>Zkouším styled component</Heading>
+        <CloudsContainer>
+          <Clouds src="/img/Clouds.png" alt="clouds" />
+        </CloudsContainer>
       </div>
     </>
   );
