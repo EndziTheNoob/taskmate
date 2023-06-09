@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import { TaskmateHomepage, Main, Description, Logo } from '../styles/Index';
-import Link from 'next/link';
+import ButtonStyle from '@/components/Link';
 
 // uprava fontu
 const inter = Inter({ subsets: ['latin'] });
@@ -24,7 +24,7 @@ export default function Home() {
           <p>To-Do list for those who need to push a little bit.</p>
           <p>Absolutely free.</p>
           <p>Are you ready?</p>
-          <Link href="/setting">Start</Link>
+          <ButtonStyle href="/setting" name="Start"></ButtonStyle>
         </Description>
         <TaskmateHomepage
           src="/img/Taskmate_Kafe.gif"
@@ -32,7 +32,8 @@ export default function Home() {
           width={300}
           height={300}
         />
-      </Main>
+      </Main>{' '}
+      "/setting"
     </>
   );
 }

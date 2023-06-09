@@ -6,6 +6,7 @@ import {
   SettingContainer,
   ButtonsContainer,
 } from '../styles/Setting';
+import ButtonStyle from '@/components/Link';
 
 export default function Setting() {
   return (
@@ -22,8 +23,8 @@ export default function Setting() {
           height={300}
         />
         <ButtonsContainer>
-          <Link href="/">back</Link>
-          <Link href="/todolist">next</Link>
+          <ButtonStyle href="/" name="Back"></ButtonStyle>
+          <ButtonStyle href="/todolist" name="Next"></ButtonStyle>
         </ButtonsContainer>
       </SettingContainer>
     </>

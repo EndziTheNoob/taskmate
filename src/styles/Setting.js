@@ -23,7 +23,7 @@ export const ButtonsContainer = styled.div`
 export const TaskmateSetting = styled.img`
   position: absolute;
   bottom: 2rem;
-  left: 10rem;
+  left: 20rem;
   z-index: 1;
 `;
 
