@@ -34,4 +34,6 @@ export const QuoteStyle = styled.div`
   left: 50%;
   border: 2px solid black;
   box-shadow: -3px 4px rgb(129, 129, 129);
+  font-family: var(--font-mono);
+  text-align: center;
 `;
