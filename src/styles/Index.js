@@ -31,31 +31,6 @@ export const Logo = styled.img`
   position: relative;
 `;
 
-export const ButtonBasic = styled.button`
-text-decoration: none;
-color: black;
-font-size: 0.8rem;
-background-color: white;
-padding: 0.5rem 2rem;
-border: black solid 0.2rem;
-box-shadow: -3px 4px rgb(129, 129, 129);
-border-radius: 12px;
-width: 10rem;
-cursor: pointer;
-font-family: var(--font-mono);
-}
-
-&:hover {
-background-color: #F4EDF9;
-transform: translateY(5px);
-}
-
-&:active {
-background-color: #F4EDF9;
-transform: translateY(5px);
-}
-`;
-
 export const TaskmateHomepage = styled.img`
   position: absolute;
   bottom: 2rem;
