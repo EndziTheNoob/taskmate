@@ -20,11 +20,11 @@ export default function Motto() {
   }, []);
 
   if (isLoading) {
-    return <div>Please wait while the quote is being uploaded.</div>;
+    return <div>Loading ...</div>;
   }
 
   const quoteLength = quote.length;
-  const dynamicHeight = quoteLength * 2;
+  const dynamicHeight = quoteLength * 1;
 
   return (
     <>
