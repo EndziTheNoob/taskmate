@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { quotesMorning } from '../../pages/api/quotes_morning';
 
 const BubbleContainer = styled.div`
-  position: relative;
-  bottom: 15rem;
+  position: absolute;
+  bottom: 22rem;
+  left: 8rem;
 `;
 
 const BubbleContent = styled.div`
@@ -13,36 +14,31 @@ const BubbleContent = styled.div`
   padding: 1rem;
   border: 2px solid #000000;
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 22px;
   box-shadow: -3px 4px rgb(129, 129, 129);
   color: #000000;
   font-size: 0.8rem;
   white-space: pre-line;
-  min-width: 600px;
+  min-width: 40%;
   font-family: var(--font-mono);
   margin-left: 2rem;
   text-align: center;
+  z-index: 1;
 `;
 
 const CharacterBubble = () => {
   const [quote, setQuote] = useState('');
 
   useEffect(() => {
-    const randomQuote =
-      quotesMorning[Math.floor(Math.random() * quotesMorning.length)];
+    const randomIndex = Math.floor(Math.random() * quotesMorning.length);
+    const randomQuote = quotesMorning[randomIndex];
     setQuote(randomQuote);
   }, []);
-
-  const handleClick = () => {
-    const randomQuote =
-      quotesMorning[Math.floor(Math.random() * quotesMorning.length)];
-    setQuote(randomQuote);
-  };
 
   return (
     <BubbleContainer>
       {quote && (
-        <BubbleContent onClick={handleClick}>
+        <BubbleContent>
           <p>{quote}</p>
         </BubbleContent>
       )}

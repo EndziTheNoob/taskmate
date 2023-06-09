@@ -14,6 +14,7 @@ export const Container = styled.div`
   margin-top: 50px;
   height: 50%;
   width: 50%;
+  max-width: 100%;
   margin-left: 25%;
   margin-right: 25%;
 `;
@@ -27,7 +28,7 @@ export const TaskList = styled.ul`
 export const Task = styled.li`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: ${Palette.purple_light};
   padding: 10px;
   margin-bottom: 0.3rem;
@@ -40,26 +41,39 @@ export const Task = styled.li`
   border-radius: 8px;
   font-family: var(--font-todolist);
   height: 2rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow the content to grow and push the delete button to the end */
+  }
 `;
 
 export const Checkbox = styled.input.attrs({
   type: 'checkbox',
 })`
   appearance: none;
+  appearance: none;
   width: 1rem;
   height: 1rem;
   border: 1px solid #aaa;
-  border-radius: 100%;
+  border-radius: 50%; /* Rounded shape */
   margin-right: 0.8rem;
   margin-left: -1rem;
   background-color: white;
   cursor: pointer;
+
+  &:checked {
+    background-color: ${Palette.gray_dark};
+    border-color: ${Palette.purple_light};
+  }
 `;
 
 export const DeleteButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  align-self: right;
 `;
 
 export const InputContainer = styled.div`

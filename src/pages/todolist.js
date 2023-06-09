@@ -12,11 +12,13 @@ import {
   PlusIcon,
 } from '../styles/Todolist.js';
 import Head from 'next/head';
+import CharacterBubble from '../components/CharacterBubble/index.js';
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
 
+  // funkce basic todo list - přidávání a mazání tasků
   const handleInputChange = (e) => {
     setNewTask(e.target.value);
   };
@@ -48,6 +50,7 @@ export default function TodoApp() {
       handleAddTask();
     }
   };
+
   return (
     <>
       <Head>
@@ -91,6 +94,7 @@ export default function TodoApp() {
             </Task>
           ))}
         </TaskList>
+        <CharacterBubble />
         <TaskmateTodo
           src="/img/Taskmate_Kafe.gif"
           alt="taskmate2"
