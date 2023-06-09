@@ -37,7 +37,7 @@ export const MenuStyle = styled.div`
 
 export const HamburgerContainer = styled.div`
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: 2rem;
+  left: 2rem;
   cursor: pointer;
 `;

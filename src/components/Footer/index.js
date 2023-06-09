@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <FooterStyle>
-        <p>A & A 2023</p>
+        <p>A&A 2023</p>
       </FooterStyle>
     </>
   );

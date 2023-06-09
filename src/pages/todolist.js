@@ -11,6 +11,7 @@ import {
   AddButton,
   TaskmateTodo,
 } from '../styles/Todolist.js';
+import Head from 'next/head';
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
@@ -49,6 +50,9 @@ export default function TodoApp() {
   };
   return (
     <>
+      <Head>
+        <title>To-Do List</title>
+      </Head>
       <nav>
         <Menu />
       </nav>
