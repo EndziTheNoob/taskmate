@@ -24,7 +24,7 @@ export default function Home() {
           <p>To-Do list for those who need to push a little bit.</p>
           <p>Absolutely free.</p>
           <p>Are you ready?</p>
-          <ButtonStyle href="/setting" name="Start"></ButtonStyle>
+          <ButtonStyle href='/setting" name="Start'></ButtonStyle>
         </Description>
         <TaskmateHomepage
           src="/img/Taskmate_Kafe.gif"
@@ -32,8 +32,7 @@ export default function Home() {
           width={300}
           height={300}
         />
-      </Main>{' '}
-      "/setting"
+      </Main>
     </>
   );
 }
