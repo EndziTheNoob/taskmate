@@ -103,6 +103,7 @@ export const InputContainer = styled.div`
   width: 100%;
   margin-bottom: 2rem;
   position: relative;
+  padding: 1rem;
 `;
 
 export const Input = styled.input`
@@ -128,7 +129,7 @@ export const Input = styled.input`
 
 export const PlusIcon = styled(FaPlus)`
   position: absolute;
-  left: 0.9rem;
+  left: 2rem;
   color: black;
   cursor: pointer;
   z-index: 1;
