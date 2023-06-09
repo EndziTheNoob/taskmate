@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaPlus } from 'react-icons/fa';
 
 export const Palette = {
   purple_light: '#F4EDF9',
@@ -43,25 +44,30 @@ export const Task = styled.li`
 
 export const Checkbox = styled.input.attrs({
   type: 'checkbox',
-})` appearance: none;
-width: 1rem;
-height: 1rem;
-border: 1px solid #aaa;
-border-radius: 100%;
-margin-right: 0.8rem;
-margin-left: -1rem;
-background-color: white;
-cursor: pointer;
-
-&:checked {}
-}
-
+})`
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 100%;
+  margin-right: 0.8rem;
+  margin-left: -1rem;
+  background-color: white;
+  cursor: pointer;
 `;
 
 export const DeleteButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+`;
+
+export const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
 `;
 
 export const Input = styled.input`
@@ -77,42 +83,20 @@ export const Input = styled.input`
   font-family: var(--font-todolist);
   width: 100%;
   height: 2rem;
+  padding-left: 3rem;
+  position: relative;
 
   &:focus {
     outline: none;
   }
 `;
 
-export const InputContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 2rem;
-`;
-
-export const AddButton = styled.button`
-  background-color: ${Palette.purple_light};
-  border: none;
+export const PlusIcon = styled(FaPlus)`
+  position: absolute;
+  left: 0.9rem;
+  color: black;
   cursor: pointer;
-  font-size: 1.8rem;
-  position: fixed;
-  right: 2rem;
-  bottom: 5rem;
-  border: black solid 0.1rem;
-  box-shadow: -3px 4px rgb(129, 129, 129);
-  border-radius: 8px;
-  width: 2.5rem;
-  height: 2.5rem;
-
-  &:hover {
-    background-color: ${Palette.purple_light};
-    transform: translateY(5px);
-  }
-
-  &:active {
-    background-color: ${Palette.purple_light};
-    transform: translateY(5px);
-  }
+  z-index: 1;
 `;
 
 export const TaskmateTodo = styled.img`

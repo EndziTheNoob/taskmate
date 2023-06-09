@@ -8,8 +8,8 @@ import {
   DeleteButton,
   Input,
   InputContainer,
-  AddButton,
   TaskmateTodo,
+  PlusIcon,
 } from '../styles/Todolist.js';
 import Head from 'next/head';
 
@@ -58,6 +58,7 @@ export default function TodoApp() {
       </nav>
       <Container>
         <InputContainer>
+          <PlusIcon onClick={handleAddTask} />
           <Input
             type="text"
             value={newTask}
@@ -90,7 +91,6 @@ export default function TodoApp() {
             </Task>
           ))}
         </TaskList>
-        <AddButton onClick={handleAddTask}>+</AddButton>
         <TaskmateTodo
           src="/img/Taskmate_Kafe.gif"
           alt="taskmate2"
