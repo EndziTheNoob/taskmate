@@ -6,6 +6,7 @@ const BubbleContainer = styled.div`
   position: absolute;
   bottom: 22rem;
   left: 8rem;
+  max-width: 400px;
 `;
 
 const BubbleContent = styled.div`
@@ -30,9 +31,24 @@ const CharacterBubble = () => {
   const [quote, setQuote] = useState('');
 
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * quotesMorning.length);
-    const randomQuote = quotesMorning[randomIndex];
-    setQuote(randomQuote);
+    let timeout1, timeout2;
+
+    // objevení bubliny po 2 vteřinách
+    timeout1 = setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * quotesMorning.length);
+      const randomQuote = quotesMorning[randomIndex];
+      setQuote(randomQuote);
+    }, 2000);
+
+    // Skrytí bubliny po 10 vteřinách
+    timeout2 = setTimeout(() => {
+      setQuote('');
+    }, 10000);
+
+    return () => {
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+    };
   }, []);
 
   return (

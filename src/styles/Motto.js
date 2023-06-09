@@ -24,6 +24,10 @@ export const CloudsContainer = styled.div`
 `;
 
 export const QuoteStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
   background-color: ${Palette.white_color};
   border-radius: 10px;
   padding: 20px;
