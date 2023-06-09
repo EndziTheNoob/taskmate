@@ -10,6 +10,7 @@ import {
   InputContainer,
   TaskmateTodo,
   PlusIcon,
+  TaskListContainer,
 } from '../styles/Todolist.js';
 import Head from 'next/head';
 import CharacterBubble from '../components/CharacterBubble/index.js';
@@ -71,28 +72,30 @@ export default function TodoApp() {
           />
         </InputContainer>
         <TaskList>
-          {tasks.map((task, index) => (
-            <Task key={index}>
-              <div>
-                <Checkbox
-                  type="checkbox"
-                  checked={task.done}
-                  onChange={() => handleToggleTask(index)}
-                />
-                <span
-                  style={{
-                    textDecoration: task.done ? 'line-through' : 'none',
-                    color: task.done ? 'darkgray' : 'black',
-                  }}
-                >
-                  {task.title}
-                </span>
-              </div>
-              <DeleteButton onClick={() => handleDeleteTask(index)}>
-                &#10005;
-              </DeleteButton>
-            </Task>
-          ))}
+          <TaskListContainer>
+            {tasks.map((task, index) => (
+              <Task key={index}>
+                <div>
+                  <Checkbox
+                    type="checkbox"
+                    checked={task.done}
+                    onChange={() => handleToggleTask(index)}
+                  />
+                  <span
+                    style={{
+                      textDecoration: task.done ? 'line-through' : 'none',
+                      color: task.done ? 'darkgray' : 'black',
+                    }}
+                  >
+                    {task.title}
+                  </span>
+                </div>
+                <DeleteButton onClick={() => handleDeleteTask(index)}>
+                  &#10005;
+                </DeleteButton>
+              </Task>
+            ))}
+          </TaskListContainer>
         </TaskList>
         <CharacterBubble />
         <TaskmateTodo

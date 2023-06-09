@@ -4,6 +4,7 @@ import { FaPlus } from 'react-icons/fa';
 export const Palette = {
   purple_light: '#F4EDF9',
   gray_dark: '#666666',
+  gray_light: 'lightgray',
 };
 
 export const Container = styled.div`
@@ -23,6 +24,26 @@ export const TaskList = styled.ul`
   list-style-type: none;
   padding: 0;
   width: 100%;
+`;
+
+export const TaskListContainer = styled.div`
+  height: 50vh;
+  overflow-y: auto;
+  padding: 1rem;
+  border-radius: 12px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${Palette.gray_light};
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: ${Palette.purple_light};
+  }
 `;
 
 export const Task = styled.li`
