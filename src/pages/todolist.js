@@ -11,6 +11,7 @@ import {
   TaskmateTodo,
   PlusIcon,
   TaskListContainer,
+  TaskCount,
 } from '../styles/Todolist.js';
 import Head from 'next/head';
 import CharacterBubble from '../components/CharacterBubble/index.js';
@@ -18,6 +19,7 @@ import CharacterBubble from '../components/CharacterBubble/index.js';
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
+  const [doneCount, setDoneCount] = useState(0);
 
   // funkce basic todo list - přidávání a mazání tasků
   const handleInputChange = (e) => {
@@ -44,6 +46,7 @@ export default function TodoApp() {
       done: !updatedTasks[index].done,
     };
     setTasks(updatedTasks);
+    setDoneCount(doneCount + 1);
   };
 
   const handleKeyPress = (e) => {
@@ -96,6 +99,7 @@ export default function TodoApp() {
               </Task>
             ))}
           </TaskListContainer>
+          <TaskCount>{`${doneCount} task(s) done`}</TaskCount>
         </TaskList>
         <CharacterBubble />
         <TaskmateTodo

@@ -141,3 +141,8 @@ export const TaskmateTodo = styled.img`
   left: 2rem;
   z-index: 1;
 `;
+
+export const TaskCount = styled.div`
+  margin-top: 1rem;
+  color: ${Palette.gray_dark};
+`;
