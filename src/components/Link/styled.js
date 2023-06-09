@@ -18,6 +18,7 @@ export const ButtonStyle = styled.div`
   margin: 2rem;
   text-align: center;
   font-family: var(--font-mono);
+  cursor: pointer;
 
   &:hover,
   &:active {
