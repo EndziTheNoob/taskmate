@@ -20,7 +20,7 @@ export default function Motto() {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>Please wait while the quote is being uploaded.</div>;
   }
 
   const quoteLength = quote.length;
