@@ -8,8 +8,8 @@ const Palette = {
 export const BubbleContainer = styled.div`
   position: absolute;
   bottom: 22rem;
-  left: 8rem;
-  max-width: 400px;
+  left: 2rem;
+  max-width: 300px;
 `;
 
 export const BubbleContent = styled.div`

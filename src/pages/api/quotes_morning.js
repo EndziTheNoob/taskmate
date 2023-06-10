@@ -1,4 +1,4 @@
-export const quotesMorning = [
+const quotesMorning = [
   'Rise and shine, $name! Time to conquer the day with boundless enthusiasm!',
   "Good morning, $name! Let's kickstart this day with a burst of productive energy!",
   'Hi $name, wake up and seize the day! Unleash your creative powers and make magic happen!',

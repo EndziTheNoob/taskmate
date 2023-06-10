@@ -36,7 +36,7 @@ function animationReducer(state, action) {
   }
 }
 
-export default function Character() {
+export default function Character({ type }) {
   const [picture, dispatch] = useReducer(animationReducer, null);
   const [showBubble, setShowBubble] = useState(false);
 
@@ -61,7 +61,7 @@ export default function Character() {
 
   return (
     <>
-      {showBubble && <CharacterBubble type="done" />}
+      {showBubble && <CharacterBubble type={type} />}
       {picture}
     </>
   );

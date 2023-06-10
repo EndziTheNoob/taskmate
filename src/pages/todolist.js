@@ -23,6 +23,7 @@ import Character from '@/components/Character/index';
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
+  const [taskDone, setTaskDone] = useState(false);
 
   useEffect(() => {
     setTasks(LoadTodos());
@@ -60,6 +61,8 @@ export default function TodoApp() {
     };
     setTasks(updatedTasks);
     SaveTodos(updatedTasks);
+
+    setTaskDone(updatedTasks[index].done);
   };
 
   const handleKeyPress = (e) => {
@@ -127,7 +130,8 @@ export default function TodoApp() {
             <TaskCount>{`${doneCount}`}</TaskCount>
           </MoneyContainer>
         </TaskList>
-        <Character />
+        <Character type="morning" />
+        {taskDone ? <Character type="done" /> : null}
       </Container>
     </>
   );
