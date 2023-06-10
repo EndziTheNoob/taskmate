@@ -1,5 +1,5 @@
 import { TaskmateArrival, TaskmateTalking, TaskmateLeaving } from './styled';
-import { useReducer } from 'react';
+import { useReducer, useEffect } from 'react';
 
 function animationReducer(state, action) {
   switch (action) {
@@ -38,12 +38,15 @@ function animationReducer(state, action) {
 export default function Character() {
   const [picture, dispatch] = useReducer(animationReducer, null);
 
-  return (
-    <>
-      <button onClick={() => dispatch('Arrival')}>test</button>
-      <button onClick={() => dispatch('Talking')}>test</button>
-      <button onClick={() => dispatch('Leaving')}>test</button>
-      {picture}
-    </>
-  );
+  useEffect(() => {
+    dispatch('Arrival');
+    setTimeout(() => {
+      dispatch('Talking');
+    }, 3000);
+    setTimeout(() => {
+      dispatch('Leaving');
+    }, 13000);
+  }, []);
+
+  return <>{picture}</>;
 }
