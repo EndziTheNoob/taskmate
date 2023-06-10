@@ -17,7 +17,6 @@ import {
   Money,
 } from '../styles/Todolist.js';
 import Head from 'next/head';
-import CharacterBubble from '../components/CharacterBubble/index.js';
 import { SaveTodos, LoadTodos, LoadDoneTodos } from '@/services/todos.js';
 import Character from '@/components/Character/index';
 
@@ -128,7 +127,6 @@ export default function TodoApp() {
             <TaskCount>{`${doneCount}`}</TaskCount>
           </MoneyContainer>
         </TaskList>
-        <CharacterBubble />
         <Character />
       </Container>
     </>

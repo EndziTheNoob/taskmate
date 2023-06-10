@@ -1,5 +1,6 @@
 import { TaskmateArrival, TaskmateTalking, TaskmateLeaving } from './styled';
-import { useReducer, useEffect } from 'react';
+import { useReducer, useEffect, useState } from 'react';
+import CharacterBubble from '@/components/CharacterBubble';
 
 function animationReducer(state, action) {
   switch (action) {
@@ -37,6 +38,16 @@ function animationReducer(state, action) {
 
 export default function Character() {
   const [picture, dispatch] = useReducer(animationReducer, null);
+  const [showBubble, setShowBubble] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBubble(true);
+    }, 3000);
+    setTimeout(() => {
+      setShowBubble(false);
+    }, 12000);
+  }, []);
 
   useEffect(() => {
     dispatch('Arrival');
@@ -48,5 +59,10 @@ export default function Character() {
     }, 13000);
   }, []);
 
-  return <>{picture}</>;
+  return (
+    <>
+      {showBubble && <CharacterBubble />}
+      {picture}
+    </>
+  );
 }
