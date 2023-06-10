@@ -14,7 +14,7 @@ export const InputStyle = styled.input`
   font-family: var(--font-mono);
 `;
 
-export const FormStyle = styled.div`
+export const FormStyle = styled.form`
   display: flex;
   flex-direction: column;
 `;

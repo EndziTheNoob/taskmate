@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { InputStyle, FormStyle, Label } from './styled';
 import { SaveUserName } from '@/services/user';
+import { useRouter } from 'next/router';
 
-export default function NameForm() {
+export default function NameForm({ id }) {
+  const router = useRouter();
+
   const [name, setName] = useState('');
 
   const handleSubmit = (e) => {
@@ -10,25 +13,18 @@ export default function NameForm() {
     console.log('Submitted name:', name);
     SaveUserName(name);
     setName('');
-  };
-
-  //zatím nastaveno na enter a ne na button next
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      handleSubmit(e);
-    }
+    router.push('/todolist');
   };
 
   return (
-    <FormStyle onSubmit={handleSubmit}>
+    <FormStyle id={id} onSubmit={handleSubmit}>
       <Label>Fill in your name or nickname:</Label>
       <InputStyle
         type="text"
         placeholder="ToDoElla..."
         value={name}
         onChange={(e) => setName(e.target.value)}
-        onKeyDown={handleKeyDown}
+        required
       />
     </FormStyle>
   );

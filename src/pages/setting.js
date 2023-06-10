@@ -6,6 +6,7 @@ import {
   ButtonsContainer,
   BubbleSetting,
   BubbleImage,
+  ButtonStyled,
 } from '../styles/Setting';
 import ButtonStyle from '@/components/Link';
 
@@ -16,7 +17,7 @@ export default function Setting() {
         <title>User profile</title>
       </Head>
       <SettingContainer>
-        <NameForm />
+        <NameForm id="nameForm" />
         <TaskmateSetting
           src="/img/Taskmate_Mrk.gif"
           alt="taskmate2"
@@ -39,8 +40,8 @@ export default function Setting() {
           </span>
         </BubbleSetting>
         <ButtonsContainer>
-          <ButtonStyle href="/" name="Back"></ButtonStyle>
-          <ButtonStyle href="/todolist" name="Next"></ButtonStyle>
+          <ButtonStyle href="/" name="Back" />
+          <ButtonStyled form="nameForm">Next</ButtonStyled>
         </ButtonsContainer>
       </SettingContainer>
     </>

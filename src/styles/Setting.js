@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Palette = {
   purple_light: '#F4EDF9',
   gray_dark: '#666666',
+  buttonColor: '#F4EDF9',
+  buttonWhite: 'white',
 };
 
 export const SettingContainer = styled.div`
@@ -42,4 +44,26 @@ export const BubbleImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+export const ButtonStyled = styled.button`
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  background-color: ${Palette.buttonWhite};
+  padding: 0.5rem 2rem;
+  border: black solid 0.2rem;
+  box-shadow: -3px 4px rgb(129, 129, 129);
+  border-radius: 12px;
+  width: 10rem;
+  margin: 2rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: ${Palette.buttonColor};
+    transform: translateY(5px);
+  }
 `;
