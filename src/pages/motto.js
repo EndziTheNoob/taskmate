@@ -37,7 +37,7 @@ export default function Motto() {
       </nav>
       <div>
         <CloudsContainer>
-          <Clouds src="/img/Clouds.png" alt="clouds" />
+          <Clouds src="/img/clouds.png" alt="clouds" />
           <QuoteStyle style={{ minHeight: `${dynamicHeight}px` }}>
             <p>{quote}</p>
             <p>- {author}</p>
