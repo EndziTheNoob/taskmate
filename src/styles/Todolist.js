@@ -145,9 +145,7 @@ export const TaskmateTodo = styled.img`
 export const TaskCount = styled.div`
   margin-top: 1rem;
   color: ${Palette.gray_dark};
-  position: absolute;
-  bottom: 4rem;
-  right: 2rem;
+  font-family: var(--font-mono);
 `;
 
 export const FilterBar = styled.div`
@@ -169,3 +167,15 @@ export const FilterButton = styled.button`
     background-color: ${Palette.purple_light};
   }
 `;
+
+export const MoneyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  bottom: 6rem;
+  right: 2rem;
+  align-items: center;
+`;
+
+export const Money = styled.img``;

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { BubbleContainer, BubbleContent } from './styled';
-import Menu from '../Menu';
 import { LoadUserName } from '@/services/user';
 
 export default function Speaking() {
@@ -22,9 +21,6 @@ export default function Speaking() {
 
   return (
     <div>
-      <nav>
-        <Menu />
-      </nav>
       <BubbleContainer>
         <BubbleContent style={{ minHeight: `${dynamicHeight}px` }}>
           <p>{quote}</p>

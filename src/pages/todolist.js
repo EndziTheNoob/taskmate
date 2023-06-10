@@ -14,6 +14,8 @@ import {
   TaskCount,
   FilterBar,
   FilterButton,
+  MoneyContainer,
+  Money,
 } from '../styles/Todolist.js';
 import Head from 'next/head';
 import CharacterBubble from '../components/CharacterBubble/index.js';
@@ -117,7 +119,15 @@ export default function TodoApp() {
               </Task>
             ))}
           </TaskListContainer>
-          <TaskCount>{`${doneCount} task(s) done`}</TaskCount>
+          <MoneyContainer>
+            <Money
+              src="/img/money.png"
+              alt="taskmate2"
+              width={50}
+              height={50}
+            />
+            <TaskCount>{`${doneCount}`}</TaskCount>
+          </MoneyContainer>
         </TaskList>
         <CharacterBubble />
         <TaskmateTodo
