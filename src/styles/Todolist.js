@@ -62,12 +62,11 @@ export const Task = styled.li`
   box-shadow: -3px 4px rgb(129, 129, 129);
   border-radius: 8px;
   font-family: var(--font-todolist);
-  height: 2rem;
+  gap: 0.8rem;
 
-  div {
-    display: flex;
-    align-items: center;
-    flex-grow: 1; /* Allow the content to grow and push the delete button to the end */
+  span {
+    flex-grow: 1;
+    word-break: break-word;
   }
 `;
 
@@ -80,10 +79,10 @@ export const Checkbox = styled.input.attrs({
   height: 1rem;
   border: 1px solid #aaa;
   border-radius: 50%; /* Rounded shape */
-  margin-right: 0.8rem;
   margin-left: -1rem;
   background-color: white;
   cursor: pointer;
+  flex-shrink: 0;
 
   &:checked {
     background-image: url('./img/tick.png');

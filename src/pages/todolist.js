@@ -98,21 +98,20 @@ export default function TodoApp() {
           <TaskListContainer>
             {tasks.map((task, index) => (
               <Task key={index}>
-                <div>
-                  <Checkbox
-                    type="checkbox"
-                    checked={task.done}
-                    onChange={() => handleToggleTask(index)}
-                  />
-                  <span
-                    style={{
-                      textDecoration: task.done ? 'line-through' : 'none',
-                      color: task.done ? 'darkgray' : 'black',
-                    }}
-                  >
-                    {task.title}
-                  </span>
-                </div>
+                <Checkbox
+                  type="checkbox"
+                  checked={task.done}
+                  onChange={() => handleToggleTask(index)}
+                />
+                <span
+                  style={{
+                    textDecoration: task.done ? 'line-through' : 'none',
+                    color: task.done ? 'darkgray' : 'black',
+                  }}
+                >
+                  {task.title}
+                </span>
+
                 <DeleteButton onClick={() => handleDeleteTask(index)}>
                   &#10005;
                 </DeleteButton>
