@@ -5,6 +5,7 @@ export const Palette = {
   purple_light: '#F4EDF9',
   gray_dark: '#666666',
   gray_light: 'lightgray',
+  blue_dark: '#DAEFFF',
 };
 
 export const Container = styled.div`
@@ -150,6 +151,22 @@ export const TaskCount = styled.div`
   right: 2rem;
 `;
 
-export const FilterBar = styled.div``;
+export const FilterBar = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+`;
 
-export const FilterButton = styled.button``;
+export const FilterButton = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 6px;
+  width: 4rem;
+
+  &:hover {
+    background-color: ${Palette.purple_light};
+  }
+`;
