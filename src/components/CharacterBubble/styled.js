@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Palette = {
   bubbleBlack: '#000000',
@@ -10,6 +10,15 @@ export const BubbleContainer = styled.div`
   bottom: 22rem;
   left: 2rem;
   max-width: 300px;
+`;
+
+const zoomIn = keyframes`
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 `;
 
 export const BubbleContent = styled.div`
@@ -28,4 +37,7 @@ export const BubbleContent = styled.div`
   margin-left: 2rem;
   text-align: center;
   z-index: 1;
+  animation-name: ${zoomIn};
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 `;

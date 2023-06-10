@@ -19,6 +19,9 @@ export const Description = styled.div`
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  @media (max-width: 375px) {
+    font-size: 3rem;
+  }
 
   & > p {
     position: relative;
@@ -29,6 +32,8 @@ export const Description = styled.div`
 
 export const Logo = styled.img`
   position: relative;
+  max-width: 100%;
+  height: auto;
 `;
 
 export const TaskmateHomepage = styled.img`
@@ -36,4 +41,8 @@ export const TaskmateHomepage = styled.img`
   bottom: 2rem;
   left: 2rem;
   z-index: 1;
+  @media (max-width: 375px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
