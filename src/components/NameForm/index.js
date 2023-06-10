@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { InputStyle, FormStyle, Label } from './styled';
+import { SaveUserName } from '@/services/user';
 
 export default function NameForm() {
   const [name, setName] = useState('');
@@ -7,7 +8,7 @@ export default function NameForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted name:', name);
-
+    SaveUserName(name);
     setName('');
   };
 
