@@ -5,13 +5,6 @@ const Palette = {
   bubbleWhite: '#ffffff',
 };
 
-export const BubbleContainer = styled.div`
-  position: absolute;
-  bottom: 22rem;
-  left: 2rem;
-  max-width: 300px;
-`;
-
 const zoomIn = keyframes`
   from {
     transform: scale(0);
@@ -19,6 +12,16 @@ const zoomIn = keyframes`
   to {
     transform: scale(1);
   }
+`;
+
+export const BubbleContainer = styled.div`
+  position: absolute;
+  bottom: 22rem;
+  left: 2rem;
+  max-width: 300px;
+  animation-name: ${zoomIn};
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 `;
 
 export const BubbleContent = styled.div`
@@ -37,7 +40,4 @@ export const BubbleContent = styled.div`
   margin-left: 2rem;
   text-align: center;
   z-index: 1;
-  animation-name: ${zoomIn};
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
 `;

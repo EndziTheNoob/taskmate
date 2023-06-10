@@ -36,7 +36,7 @@ export const BubbleSetting = styled.div`
   text-align: center;
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  bottom: -4rem;
+  bottom: 0rem;
   left: -4rem;
 `;
 
@@ -55,8 +55,8 @@ export const ButtonStyled = styled.button`
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);
   border-radius: 12px;
-  width: 10rem;
-  margin: 2rem;
+  width: 11rem;
+  margin: 3rem;
   text-align: center;
   font-family: var(--font-mono);
   cursor: pointer;

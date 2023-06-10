@@ -19,12 +19,6 @@ export default function Setting() {
       </Head>
       <SettingContainer>
         <NameForm id="nameForm" />
-        <TaskmateSetting
-          src="/img/Taskmate_Mrk.gif"
-          alt="taskmate2"
-          width={300}
-          height={300}
-        />
         <Template />
         <BubbleSetting>
           <BubbleImage src="/img/bublina.png" alt="bublina" />
@@ -41,6 +35,12 @@ export default function Setting() {
             Hi, I am Todoella! What is your name?
           </span>
         </BubbleSetting>
+        <TaskmateSetting
+          src="/img/Taskmate_Mrk.gif"
+          alt="taskmate2"
+          width={300}
+          height={300}
+        />
         <ButtonsContainer>
           <ButtonStyle href="/" name="Back" />
           <ButtonStyled form="nameForm">Next</ButtonStyled>

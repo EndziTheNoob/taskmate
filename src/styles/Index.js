@@ -20,7 +20,7 @@ export const Description = styled.div`
   z-index: 2;
   font-family: var(--font-mono);
   @media (max-width: 375px) {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 
   & > p {

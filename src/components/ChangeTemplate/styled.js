@@ -14,9 +14,7 @@ export const Container = styled.div`
   font-family: var(--font-mono);
   display: flex;
   flex-direction: column;
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
+  margin: 2rem;
 `;
 
 export const Colors = styled.div`
@@ -27,11 +25,12 @@ export const Colors = styled.div`
 export const Circle1 = styled.div`
   background-color: ${Palette.purple_light};
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border: black solid 0.1rem;
   gap: 1rem;
   margin: 0.5rem;
+  box-shadow: -3px 4px rgb(129, 129, 129);
   cursor: pointer;
   &:hover,
   &:active {
@@ -43,11 +42,12 @@ export const Circle1 = styled.div`
 export const Circle2 = styled.div`
   background-color: ${Palette.pink_light};
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border: black solid 0.1rem;
   margin: 0.5rem;
   cursor: pointer;
+  box-shadow: -3px 4px rgb(129, 129, 129);
   &:hover,
   &:active {
     background-color: ${Palette.pink_lighter};
@@ -58,10 +58,11 @@ export const Circle2 = styled.div`
 export const Circle3 = styled.div`
   background-color: ${Palette.blue_light};
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border: black solid 0.1rem;
   margin: 0.5rem;
+  box-shadow: -3px 4px rgb(129, 129, 129);
   cursor: pointer;
   &:hover,
   &:active {
