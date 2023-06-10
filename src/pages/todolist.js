@@ -8,7 +8,6 @@ import {
   DeleteButton,
   Input,
   InputContainer,
-  TaskmateTodo,
   PlusIcon,
   TaskListContainer,
   TaskCount,
@@ -20,6 +19,7 @@ import {
 import Head from 'next/head';
 import CharacterBubble from '../components/CharacterBubble/index.js';
 import { SaveTodos, LoadTodos, LoadDoneTodos } from '@/services/todos.js';
+import Character from '@/components/Character/index';
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
@@ -130,12 +130,7 @@ export default function TodoApp() {
           </MoneyContainer>
         </TaskList>
         <CharacterBubble />
-        <TaskmateTodo
-          src="/img/Taskmate_Kafe.gif"
-          alt="taskmate2"
-          width={300}
-          height={300}
-        />
+        <Character />
       </Container>
     </>
   );

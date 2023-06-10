@@ -135,13 +135,6 @@ export const PlusIcon = styled(FaPlus)`
   z-index: 1;
 `;
 
-export const TaskmateTodo = styled.img`
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  z-index: 1;
-`;
-
 export const TaskCount = styled.div`
   margin-top: 1rem;
   color: ${Palette.gray_dark};
