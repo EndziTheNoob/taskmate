@@ -21,7 +21,7 @@ export default function NameForm({ id }) {
       <Label>Fill in your name or nickname:</Label>
       <InputStyle
         type="text"
-        placeholder="ToDoElla..."
+        placeholder="Todoella..."
         value={name}
         onChange={(e) => setName(e.target.value)}
         required

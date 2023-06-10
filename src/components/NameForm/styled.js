@@ -12,6 +12,10 @@ export const InputStyle = styled.input`
   width: 20rem;
   height: 4rem;
   font-family: var(--font-mono);
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const FormStyle = styled.form`

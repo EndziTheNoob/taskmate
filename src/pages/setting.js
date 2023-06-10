@@ -25,7 +25,7 @@ export default function Setting() {
           width={300}
           height={300}
         />
-        <Template/>
+        <Template />
         <BubbleSetting>
           <BubbleImage src="/img/bublina.png" alt="bublina" />
           <span
@@ -38,7 +38,7 @@ export default function Setting() {
               marginLeft: '5px',
             }}
           >
-            Hi, I am ToDoElla! What is your name?
+            Hi, I am Todoella! What is your name?
           </span>
         </BubbleSetting>
         <ButtonsContainer>
