@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const Palette = {
-  buttonColor: '#F4EDF9',
-  buttonWhite: 'white',
+  bubbleBlack: '#000000',
+  bubbleWhite: '#ffffff',
 };
 
 export const BubbleContainer = styled.div`
@@ -16,11 +16,11 @@ export const BubbleContent = styled.div`
   position: relative;
   display: inline-block;
   padding: 1rem;
-  border: 2px solid #000000;
-  background-color: #ffffff;
+  border: 2px solid ${Palette.bubbleBlacks};
+  background-color: ${Palette.bubbleWhite};
   border-radius: 22px;
   box-shadow: -3px 4px rgb(129, 129, 129);
-  color: #000000;
+  color: ${Palette.bubbleBlacks};
   font-size: 0.8rem;
   white-space: pre-line;
   min-width: 40%;
