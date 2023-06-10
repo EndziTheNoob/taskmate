@@ -35,7 +35,7 @@ export default function Setting() {
               marginLeft: '5px',
             }}
           >
-            Hi, I'm ToDoElla! What's your name?
+            Hi, I am ToDoElla! What is your name?
           </span>
         </BubbleSetting>
         <ButtonsContainer>
