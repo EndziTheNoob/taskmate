@@ -9,6 +9,7 @@ import {
   ButtonStyled,
 } from '../styles/Setting';
 import ButtonStyle from '@/components/Link';
+import Template from '@/components/ChangeTemplate';
 
 export default function Setting() {
   return (
@@ -24,6 +25,7 @@ export default function Setting() {
           width={300}
           height={300}
         />
+        <Template/>
         <BubbleSetting>
           <BubbleImage src="/img/bublina.png" alt="bublina" />
           <span
