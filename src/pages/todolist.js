@@ -1,5 +1,5 @@
 import Menu from '../components/Menu/index.js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Container,
   TaskList,
@@ -12,14 +12,23 @@ import {
   PlusIcon,
   TaskListContainer,
   TaskCount,
+  FilterBar,
+  FilterButton,
 } from '../styles/Todolist.js';
 import Head from 'next/head';
 import CharacterBubble from '../components/CharacterBubble/index.js';
+import { SaveTodos, LoadTodos, LoadDoneTodos } from '@/services/todos.js';
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
-  const [doneCount, setDoneCount] = useState(0);
+
+  useEffect(() => {
+    setTasks(LoadTodos());
+  }, []);
+
+  // počet hotových tasků
+  const doneCount = tasks.filter((todo) => todo.done).length;
 
   // funkce basic todo list - přidávání a mazání tasků
   const handleInputChange = (e) => {
@@ -28,7 +37,9 @@ export default function TodoApp() {
 
   const handleAddTask = () => {
     if (newTask.trim() !== '') {
-      setTasks([{ title: newTask, done: false }, ...tasks]);
+      const updatedTasks = [{ title: newTask, done: false }, ...tasks];
+      setTasks(updatedTasks);
+      SaveTodos(updatedTasks);
       setNewTask('');
     }
   };
@@ -37,6 +48,7 @@ export default function TodoApp() {
     const updatedTasks = [...tasks];
     updatedTasks.splice(index, 1);
     setTasks(updatedTasks);
+    SaveTodos(updatedTasks);
   };
 
   const handleToggleTask = (index) => {
@@ -46,7 +58,7 @@ export default function TodoApp() {
       done: !updatedTasks[index].done,
     };
     setTasks(updatedTasks);
-    setDoneCount(doneCount + 1);
+    SaveTodos(updatedTasks);
   };
 
   const handleKeyPress = (e) => {
@@ -64,6 +76,12 @@ export default function TodoApp() {
         <Menu />
       </nav>
       <Container>
+        <FilterBar>
+          <FilterButton onClick={() => setTasks(LoadTodos())}>All</FilterButton>
+          <FilterButton onClick={() => setTasks(LoadDoneTodos())}>
+            Done
+          </FilterButton>
+        </FilterBar>
         <InputContainer>
           <PlusIcon onClick={handleAddTask} />
           <Input

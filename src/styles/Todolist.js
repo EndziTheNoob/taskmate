@@ -145,4 +145,11 @@ export const TaskmateTodo = styled.img`
 export const TaskCount = styled.div`
   margin-top: 1rem;
   color: ${Palette.gray_dark};
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
 `;
+
+export const FilterBar = styled.div``;
+
+export const FilterButton = styled.button``;
