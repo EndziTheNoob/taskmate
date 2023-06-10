@@ -85,7 +85,8 @@ export const Checkbox = styled.input.attrs({
   flex-shrink: 0;
 
   &:checked {
-    background-image: url('./img/tick.png');
+    background-image: url('/img/tick.png');
+    background-size: cover;
   }
 `;
 
