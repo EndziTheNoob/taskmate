@@ -4,8 +4,11 @@ import { LoadUserName } from '@/services/user';
 
 export default function Speaking() {
   const [quote, setQuote] = useState('');
+  const [name, setName] = useState('');
 
-  const name = LoadUserName();
+  useEffect(() => {
+    setName(LoadUserName());
+  }, []);
 
   useEffect(() => {
     fetch('/api/quotes_morning')
@@ -14,7 +17,7 @@ export default function Speaking() {
         setQuote(data.quote.replace('$name', name));
       })
       .catch((error) => console.error(error));
-  }, []);
+  }, [name]);
 
   const quoteLength = quote.length;
   const dynamicHeight = quoteLength * 1;

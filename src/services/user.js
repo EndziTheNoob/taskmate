@@ -1,9 +1,7 @@
-let nameStorage = '';
-
 export function SaveUserName(name) {
-  nameStorage = name;
+  localStorage.setItem('name', name);
 }
 
 export function LoadUserName() {
-  return nameStorage;
+  return localStorage.getItem('name') ?? '';
 }
