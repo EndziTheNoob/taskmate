@@ -88,6 +88,11 @@ export const Checkbox = styled.input.attrs({
     background-image: url('/img/tickgray.png');
     background-size: cover;
   }
+
+  &:hover {
+    background-image: url('/img/tickgray.png');
+    background-size: cover;
+  }
 `;
 
 export const DeleteButton = styled.button`
