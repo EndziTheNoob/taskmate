@@ -24,6 +24,7 @@ export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
   const [taskDone, setTaskDone] = useState(false);
+  const [firstAnimationDone, setFirstAnimationDone] = useState(false);
 
   useEffect(() => {
     setTasks(LoadTodos());
@@ -130,8 +131,11 @@ export default function TodoApp() {
             <TaskCount>{`${doneCount}`}</TaskCount>
           </MoneyContainer>
         </TaskList>
-        <Character type="morning" />
-        {taskDone ? (
+        <Character
+          type="morning"
+          onAnimationComplete={() => setFirstAnimationDone(true)}
+        />
+        {firstAnimationDone && taskDone ? (
           <Character
             type="done"
             onAnimationComplete={() => setTaskDone(false)}
