@@ -1,15 +1,15 @@
 export const quotesMorning = [
-  'Rise and shine, my friend! Time to conquer the day with boundless enthusiasm!',
-  "Good morning, sunshine! Let's kickstart this day with a burst of productive energy!",
-  'Wake up and seize the day! Unleash your creative powers and make magic happen!',
-  "Good morning! It's a brand new day full of possibilities!",
-  "Wake up, be awesome, and repeat. You've got this!",
-  'Every morning is a fresh start. Make it count!',
-  'Start your day with a positive mindset and watch the magic unfold.',
-  "Good morning! It's a brand new day full of possibilities!",
-  'Rise and shine! Today is the perfect day to make your dreams come true.',
-  'Good morning! Set your intentions for the day and make every moment count.',
-  'Good morning! Remember, every accomplishment starts with the decision to try.',
+  'Rise and shine, $name! Time to conquer the day with boundless enthusiasm!',
+  "Good morning, $name! Let's kickstart this day with a burst of productive energy!",
+  'Hi $name, wake up and seize the day! Unleash your creative powers and make magic happen!',
+  "Good morning, $name! It's a brand new day full of possibilities!",
+  "Hi $name! Wake up, be awesome, and repeat. You've got this!",
+  'Hi $name! Every morning is a fresh start. Make it count!',
+  'Good Morning $name! Start your day with a positive mindset and watch the magic unfold.',
+  "Good morning $name! It's a brand new day full of possibilities!",
+  'Rise and shine $name! Today is the perfect day to make your dreams come true.',
+  'Good morning $name! Set your intentions for the day and make every moment count.',
+  'Good morning $name! Remember, every accomplishment starts with the decision to try.',
 ];
 
 // Generování hlášek, aby se generovali postupně, jak jdou za sebou

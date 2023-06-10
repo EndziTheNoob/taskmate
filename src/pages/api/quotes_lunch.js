@@ -1,6 +1,6 @@
 const quotesLunch = [
-  "It's lunch o'clock! Recharge your batteries and indulge in a well-deserved feast for your mind and body!",
-  'Time to refuel and recharge! Enjoy your lunch break and come back stronger than ever!',
+  "$name, It's lunch o'clock! Recharge your batteries and indulge in a well-deserved feast for your mind and body!",
+  'Time to refuel and recharge! Enjoy your lunch break $name and come back stronger than ever!',
   'Bon appétit! Treat yourself to a delicious meal and return with a fresh burst of inspiration!',
 ];
 
