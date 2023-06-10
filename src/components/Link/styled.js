@@ -10,11 +10,11 @@ export const ButtonStyle = styled.div`
   color: black;
   font-size: 0.8rem;
   background-color: ${Palette.buttonWhite};
-  padding: 0.5rem 2rem;
+  padding: 0.8rem 2rem;
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);
   border-radius: 12px;
-  width: 10rem;
+  width: 9rem;
   margin: 2rem;
   text-align: center;
   font-family: var(--font-mono);
@@ -24,5 +24,10 @@ export const ButtonStyle = styled.div`
   &:active {
     background-color: ${Palette.buttonColor};
     transform: translateY(5px);
+  }
+
+  a {
+    font-size: 1rem;
+    padding: 0.8rem;
   }
 `;

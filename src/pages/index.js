@@ -18,8 +18,8 @@ export default function Home() {
           <Logo
             src="/img/logo_bublina.png"
             alt="logo"
-            width={600}
-            height={200}
+            width={500}
+            height={150}
           />
           <p>To-Do list for those who need to push a little bit.</p>
           <p>Absolutely free.</p>

@@ -60,6 +60,7 @@ export const ButtonStyled = styled.button`
   text-align: center;
   font-family: var(--font-mono);
   cursor: pointer;
+  font-size: 1rem;
 
   &:hover,
   &:active {
