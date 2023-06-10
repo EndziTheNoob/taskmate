@@ -22,6 +22,15 @@ function animationReducer(state, action) {
           height={300}
         />
       );
+    case 'Hair':
+      return (
+        <TaskmateTalking
+          src="/img/Taskmate_Hair_Basic.gif"
+          alt="taskmate2"
+          width={300}
+          height={300}
+        />
+      );
     case 'Leaving':
       return (
         <TaskmateLeaving
@@ -36,7 +45,7 @@ function animationReducer(state, action) {
   }
 }
 
-export default function Character({ type }) {
+export default function Character({ type, onAnimationComplete }) {
   const [picture, dispatch] = useReducer(animationReducer, null);
   const [showBubble, setShowBubble] = useState(false);
 
@@ -52,11 +61,14 @@ export default function Character({ type }) {
   useEffect(() => {
     dispatch('Arrival');
     setTimeout(() => {
-      dispatch('Talking');
+      dispatch(type === 'done' ? 'Hair' : 'Talking');
     }, 3000);
     setTimeout(() => {
       dispatch('Leaving');
     }, 13000);
+    setTimeout(() => {
+      onAnimationComplete?.();
+    }, 16000);
   }, []);
 
   return (

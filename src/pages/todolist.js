@@ -62,7 +62,7 @@ export default function TodoApp() {
     setTasks(updatedTasks);
     SaveTodos(updatedTasks);
 
-    setTaskDone(updatedTasks[index].done);
+    if (updatedTasks[index].done) setTaskDone(true);
   };
 
   const handleKeyPress = (e) => {
@@ -131,7 +131,12 @@ export default function TodoApp() {
           </MoneyContainer>
         </TaskList>
         <Character type="morning" />
-        {taskDone ? <Character type="done" /> : null}
+        {taskDone ? (
+          <Character
+            type="done"
+            onAnimationComplete={() => setTaskDone(false)}
+          />
+        ) : null}
       </Container>
     </>
   );
