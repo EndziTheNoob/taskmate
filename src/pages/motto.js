@@ -31,10 +31,11 @@ export default function Motto() {
       <Head>
         <title>Motto</title>
       </Head>
+
+      <nav>
+        <Menu />
+      </nav>
       <div>
-        <nav>
-          <Menu />
-        </nav>
         <CloudsContainer>
           <Clouds src="/img/Clouds.png" alt="clouds" />
           <QuoteStyle style={{ minHeight: `${dynamicHeight}px` }}>

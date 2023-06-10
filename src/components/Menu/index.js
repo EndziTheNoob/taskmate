@@ -26,7 +26,6 @@ export default function Menu() {
       {isOpen && (
         <MenuStyle>
           <Link href="/todolist">tasks</Link>
-          <Link href="/donelist">done</Link>
           <Link href="/motto">motto</Link>
         </MenuStyle>
       )}

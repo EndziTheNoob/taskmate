@@ -86,8 +86,7 @@ export const Checkbox = styled.input.attrs({
   cursor: pointer;
 
   &:checked {
-    background-color: ${Palette.gray_dark};
-    border-color: ${Palette.purple_light};
+    background-image: url('./img/tick.png');
   }
 `;
 

@@ -40,5 +40,5 @@ export const HamburgerContainer = styled.div`
   top: 2rem;
   left: 2rem;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 `;
