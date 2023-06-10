@@ -5,9 +5,19 @@ import { LoadUserName } from '@/services/user';
 export default function Speaking() {
   const [quote, setQuote] = useState('');
   const [name, setName] = useState('');
+  const [showBubble, setShowBubble] = useState(false);
 
   useEffect(() => {
     setName(LoadUserName());
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBubble(true);
+    }, 3000);
+    setTimeout(() => {
+      setShowBubble(false);
+    }, 12000);
   }, []);
 
   useEffect(() => {
@@ -25,9 +35,11 @@ export default function Speaking() {
   return (
     <div>
       <BubbleContainer>
-        <BubbleContent style={{ minHeight: `${dynamicHeight}px` }}>
-          <p>{quote}</p>
-        </BubbleContent>
+        {showBubble && (
+          <BubbleContent style={{ minHeight: `${dynamicHeight}px` }}>
+            <p>{quote}</p>
+          </BubbleContent>
+        )}
       </BubbleContainer>
     </div>
   );
