@@ -61,7 +61,7 @@ export default function Character() {
 
   return (
     <>
-      {showBubble && <CharacterBubble />}
+      {showBubble && <CharacterBubble type="done" />}
       {picture}
     </>
   );

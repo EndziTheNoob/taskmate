@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { BubbleContainer, BubbleContent } from './styled';
 import { LoadUserName } from '@/services/user';
 
-export default function Speaking() {
+export default function Speaking({ type }) {
   const [quote, setQuote] = useState('');
   const [name, setName] = useState('');
 
@@ -11,13 +11,13 @@ export default function Speaking() {
   }, []);
 
   useEffect(() => {
-    fetch('/api/quotes_morning')
+    fetch(`/api/quotes_${type}`)
       .then((response) => response.json())
       .then((data) => {
         setQuote(data.quote.replace('$name', name));
       })
       .catch((error) => console.error(error));
-  }, [name]);
+  }, [name, type]);
 
   const quoteLength = quote.length;
   const dynamicHeight = quoteLength * 1;
