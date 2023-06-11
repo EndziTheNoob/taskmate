@@ -2,6 +2,10 @@ import { TaskmateArrival, TaskmateTalking, TaskmateLeaving } from './styled';
 import { useReducer, useEffect, useState } from 'react';
 import CharacterBubble from '@/components/CharacterBubble';
 
+/**
+ * @param {any} state
+ * @param {string} action
+ */
 function animationReducer(state, action) {
   switch (action) {
     case 'Arrival':

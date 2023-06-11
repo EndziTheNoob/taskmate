@@ -23,6 +23,7 @@ export default function TodoApp() {
   const [newTask, setNewTask] = useState('');
   const [taskDone, setTaskDone] = useState(false);
   const [firstAnimationDone, setFirstAnimationDone] = useState(false);
+  const [taskCount, setTaskCount] = useState(0);
 
   useEffect(() => {
     setTasks(LoadTodos());
@@ -62,7 +63,12 @@ export default function TodoApp() {
     setTasks(updatedTasks);
     SaveTodos(updatedTasks);
 
-    if (updatedTasks[index].done) setTaskDone(true);
+    if (updatedTasks[index].done) setTaskCount(taskCount + 1);
+
+    if (taskCount === 4) {
+      setTaskDone(true);
+      setTaskCount(0);
+    }
   };
 
   const handleEditTask = (index, newTitle) => {
