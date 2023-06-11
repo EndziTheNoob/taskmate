@@ -9,11 +9,11 @@ export default function Motto() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.goprogram.ai/inspiration')
+    fetch('https://api.quotable.io/quotes/random')
       .then((response) => response.json())
       .then((data) => {
-        setQuote(data.quote);
-        setAuthor(data.author);
+        setQuote(data[0].content);
+        setAuthor(data[0].author);
         setIsLoading(false);
       })
       .catch((error) => console.error(error));

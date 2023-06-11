@@ -17,6 +17,7 @@ export const signIn = (email, password) => {
 };
 
 export const signOut = () => {
+  sessionStorage.removeItem('hasArrived');
   return supabase.auth.signOut();
 };
 

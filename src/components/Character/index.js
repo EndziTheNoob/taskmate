@@ -54,6 +54,8 @@ export default function Character({ type, onAnimationComplete }) {
   const [showBubble, setShowBubble] = useState(false);
 
   useEffect(() => {
+    const hasArrived = window.sessionStorage.getItem('hasArrived');
+    if (hasArrived) return;
     setTimeout(() => {
       setShowBubble(true);
     }, 3000);
@@ -63,7 +65,10 @@ export default function Character({ type, onAnimationComplete }) {
   }, []);
 
   useEffect(() => {
+    const hasArrived = window.sessionStorage.getItem('hasArrived');
+    if (hasArrived) return;
     dispatch('Arrival');
+    sessionStorage.setItem('hasArrived', 'Yes');
     setTimeout(() => {
       dispatch(type === 'done' ? 'Hair' : 'Talking');
     }, 3000);
