@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import Menu from '../components/Menu/index.js';
 import Head from 'next/head';
 import { Clouds, CloudsContainer, QuoteStyle } from '../styles/Motto.js';
+import Header from '@/components/Header/index.js';
 
 export default function Motto() {
   const [quote, setQuote] = useState('');
@@ -31,10 +31,7 @@ export default function Motto() {
       <Head>
         <title>Motto</title>
       </Head>
-
-      <nav>
-        <Menu />
-      </nav>
+      <Header />
       <div>
         <CloudsContainer>
           <Clouds src="/img/clouds.png" alt="clouds" />

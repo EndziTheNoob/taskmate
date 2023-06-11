@@ -1,4 +1,3 @@
-import Menu from '@/components/Menu';
 import { useEffect, useState } from 'react';
 import {
   Container,
@@ -17,6 +16,7 @@ import Head from 'next/head';
 import { LoadTodos, AddTodo, DeleteTodo, ToggleTodo } from '@/services/todos';
 import Character from '@/components/Character';
 import Task from '@/components/Task';
+import Header from '@/components/Header';
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
@@ -89,9 +89,7 @@ export default function TodoApp() {
       <Head>
         <title>To-Do List</title>
       </Head>
-      <nav>
-        <Menu />
-      </nav>
+      <Header />
       <Container>
         <FilterBar>
           {/* <FilterButton onClick={() => setTasks(LoadTodos())}>All</FilterButton> */}

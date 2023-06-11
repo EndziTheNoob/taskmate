@@ -17,7 +17,7 @@ export default function Menu() {
         menuClicked={handleClick}
         width={24}
         height={18}
-        strokeWidth={2}
+        strokeWidth={3}
         rotate={0}
         color="black"
         borderRadius={0}
