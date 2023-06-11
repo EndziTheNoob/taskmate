@@ -61,3 +61,10 @@ export const TaskStyled = styled.li`
     word-break: break-word;
   }
 `;
+
+export const EditButton = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: right;
+`;
