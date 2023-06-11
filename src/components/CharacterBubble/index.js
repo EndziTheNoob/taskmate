@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 import { BubbleContainer, BubbleContent } from './styled';
-import { LoadUserName } from '@/services/user';
+import { LoadUserProfile } from '@/services/user';
 
 export default function Speaking({ type }) {
   const [quote, setQuote] = useState('');
   const [name, setName] = useState('');
 
   useEffect(() => {
-    setName(LoadUserName());
+    LoadUserProfile().then((profile) => {
+      if (profile !== null) setName(profile.nickname);
+    });
   }, []);
 
   useEffect(() => {

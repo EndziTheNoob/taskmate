@@ -12,8 +12,19 @@ export async function SaveUserProfile(name, color) {
     .select();
 }
 
-export function LoadUserName() {
-  return localStorage.getItem('name') ?? '';
+export async function LoadUserProfile() {
+  const { data } = await getSession();
+  if (!data) {
+    return null;
+  }
+
+  const result = await supabase
+    .from('profiles')
+    .select()
+    .eq('id', data.session.user.id);
+
+  if (!result.data) return null;
+  return result.data[0];
 }
 
 export const signUp = (email, password) => {
