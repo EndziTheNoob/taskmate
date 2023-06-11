@@ -1,7 +1,15 @@
 import { supabase } from './supabase';
 
-export function SaveUserName(name) {
-  localStorage.setItem('name', name);
+export async function SaveUserProfile(name, color) {
+  const { data } = await getSession();
+  if (!data) {
+    return;
+  }
+
+  await supabase
+    .from('profiles')
+    .upsert({ id: data.session.user.id, nickname: name, color: color })
+    .select();
 }
 
 export function LoadUserName() {
