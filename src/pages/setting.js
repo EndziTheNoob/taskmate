@@ -9,8 +9,21 @@ import {
   ButtonStyled,
 } from '../styles/Setting';
 import ButtonStyle from '@/components/Link';
+import { useState, useEffect } from 'react';
+import {
+  BubbleContainer,
+  BubbleContent,
+} from '@/components/CharacterBubble/styled';
 
 export default function Setting() {
+  const [showBubble, setShowBubble] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowBubble(true);
+    }, 2000);
+  }, []);
+
   return (
     <>
       <Head>
@@ -18,7 +31,7 @@ export default function Setting() {
       </Head>
       <SettingContainer>
         <NameForm id="nameForm" />
-        <BubbleSetting>
+        {/* <BubbleSetting>
           <BubbleImage src="/img/bublina.png" alt="bublina" />
           <span
             style={{
@@ -32,7 +45,19 @@ export default function Setting() {
           >
             Hi, I am Todoella! What is your name?
           </span>
-        </BubbleSetting>
+        </BubbleSetting> */}
+        <BubbleContainer
+          onChange={() => showBubble}
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '33%',
+          }}
+        >
+          <BubbleContent>
+            <p>Hi! My name is Todoella! What is your name?</p>
+          </BubbleContent>
+        </BubbleContainer>
         <TaskmateSetting
           src="/img/Taskmate_Mrk.gif"
           alt="taskmate2"
