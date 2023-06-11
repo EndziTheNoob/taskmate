@@ -1,11 +1,8 @@
-import Menu from '../components/Menu/index.js';
+import Menu from '@/components/Menu';
 import { useEffect, useState } from 'react';
 import {
   Container,
   TaskList,
-  Task,
-  Checkbox,
-  DeleteButton,
   Input,
   InputContainer,
   PlusIcon,
@@ -15,10 +12,11 @@ import {
   FilterButton,
   MoneyContainer,
   Money,
-} from '../styles/Todolist.js';
+} from '@/styles/Todolist';
 import Head from 'next/head';
-import { SaveTodos, LoadTodos, LoadDoneTodos } from '@/services/todos.js';
-import Character from '@/components/Character/index';
+import { SaveTodos, LoadTodos, LoadDoneTodos } from '@/services/todos';
+import Character from '@/components/Character';
+import Task from '@/components/Task';
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
@@ -100,25 +98,12 @@ export default function TodoApp() {
         <TaskList>
           <TaskListContainer>
             {tasks.map((task, index) => (
-              <Task key={index}>
-                <Checkbox
-                  type="checkbox"
-                  checked={task.done}
-                  onChange={() => handleToggleTask(index)}
-                />
-                <span
-                  style={{
-                    textDecoration: task.done ? 'line-through' : 'none',
-                    color: task.done ? 'darkgray' : 'black',
-                  }}
-                >
-                  {task.title}
-                </span>
-
-                <DeleteButton onClick={() => handleDeleteTask(index)}>
-                  &#10005;
-                </DeleteButton>
-              </Task>
+              <Task
+                key={index}
+                task={task}
+                onCheck={() => handleToggleTask(index)}
+                onDelete={() => handleDeleteTask(index)}
+              />
             ))}
           </TaskListContainer>
           <MoneyContainer>

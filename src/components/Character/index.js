@@ -69,7 +69,7 @@ export default function Character({ type, onAnimationComplete }) {
     setTimeout(() => {
       onAnimationComplete?.();
     }, 16000);
-  }, [onAnimationComplete, type]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
