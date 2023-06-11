@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "module": "ES6",
+    "moduleResolution": "nodenext",
+    "jsx": "preserve",
+    "checkJs": true,
     "paths": {
       "@/*": ["./src/*"]
     }
