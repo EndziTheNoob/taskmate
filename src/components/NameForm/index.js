@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { InputStyle, FormStyle, Label } from './styled';
-import { SaveUserName } from '@/services/user';
+import { SaveUserProfile } from '@/services/user';
 import { useRouter } from 'next/router';
 import ChangeTemplate, { Palette } from '../ChangeTemplate';
 
@@ -12,9 +12,7 @@ export default function NameForm({ id }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted name:', name);
-    SaveUserName(name);
-    console.log(color);
+    SaveUserProfile(name, color);
     setName('');
     router.push('/todolist');
   };
