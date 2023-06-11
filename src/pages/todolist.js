@@ -24,6 +24,7 @@ import {
 import Character from '@/components/Character';
 import Task from '@/components/Task';
 import Header from '@/components/Header';
+import { ReactSortable } from 'react-sortablejs';
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
@@ -121,16 +122,27 @@ export default function TodoApp() {
         </InputContainer>
         <TaskList>
           <TaskListContainer>
-            {tasks.map((task, index) => (
-              <Task
-                key={index}
-                task={task}
-                onCheck={() => handleToggleTask(index, task.id)}
-                onDelete={() => handleDeleteTask(index, task.id)}
-                onEdit={(newTitle) => handleEditTask(index, newTitle, task.id)}
-              />
-            ))}
+            <ReactSortable
+              list={tasks}
+              setList={setTasks}
+              animation={200}
+              swap
+              ghostClass={'currentItem'}
+            >
+              {tasks.map((task, index) => (
+                <Task
+                  key={index}
+                  task={task}
+                  onCheck={() => handleToggleTask(index, task.id)}
+                  onDelete={() => handleDeleteTask(index, task.id)}
+                  onEdit={(newTitle) =>
+                    handleEditTask(index, newTitle, task.id)
+                  }
+                />
+              ))}
+            </ReactSortable>
           </TaskListContainer>
+
           <MoneyContainer>
             <Money
               src="/img/money.png"

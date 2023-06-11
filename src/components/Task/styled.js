@@ -5,6 +5,7 @@ export const Palette = {
   gray_dark: '#666666',
   gray_light: 'lightgray',
   blue_dark: '#DAEFFF',
+  dark_purple: '#b6acbd',
 };
 
 export const DeleteButton = styled.button`
@@ -59,6 +60,10 @@ export const TaskStyled = styled.li`
   span {
     flex-grow: 1;
     word-break: break-word;
+  }
+
+  &.currentItem {
+    background-color: ${Palette.dark_purple};
   }
 `;
 
