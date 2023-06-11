@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import axios from 'axios';
 import { FormStyle, Label, InputStyle, ButtonStyle } from '../styles/Register';
+import { signIn, signUp } from '../services/user';
 
 const schema = yup.object().shape({
   email: yup
@@ -26,8 +26,9 @@ export default function RegisterForm() {
 
   const onSubmit = async (data) => {
     try {
-      // Odešlete data na server pomocí Supabase API nebo jiné metody dle vašeho výběru
-      await axios.post('/api/login', data);
+      await signUp(data.email, data.password).then(
+        signIn(data.email, data.password),
+      );
 
       // Přesměrujte na stránku "setting"
       window.location.href = '/setting';
