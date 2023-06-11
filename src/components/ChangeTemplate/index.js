@@ -1,14 +1,27 @@
 import { Container } from './styled';
-import { Circle1, Circle2, Circle3, Colors } from './styled';
+import { Circle, Colors } from './styled';
+import { useState } from 'react';
 
-export default function Template() {
+export const Palette = ['#B6ACBD', '#FFC8DD', '#A8D8FF'];
+
+export default function ChangeTemplate({ onSelect, defaultColor }) {
+  const [selectedColor, setSelectedColor] = useState(defaultColor);
+
   return (
     <Container>
       <p>Pick color for your list:</p>
       <Colors>
-        <Circle1/>
-        <Circle2 />
-        <Circle3 />
+        {Palette.map((color) => (
+          <Circle
+            color={color}
+            key={color}
+            onClick={() => {
+              onSelect(color);
+              setSelectedColor(color);
+            }}
+            selected={selectedColor === color}
+          />
+        ))}
       </Colors>
     </Container>
   );
