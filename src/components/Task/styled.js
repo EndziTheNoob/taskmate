@@ -63,7 +63,7 @@ export const TaskStyled = styled.li`
   }
 
   &.currentItem {
-    background-color: ${Palette.dark_purple};
+    filter: brightness(70%);
   }
 `;
 
