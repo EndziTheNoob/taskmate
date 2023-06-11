@@ -14,7 +14,7 @@ import {
   Money,
 } from '@/styles/Todolist';
 import Head from 'next/head';
-import { SaveTodos, LoadTodos, LoadDoneTodos } from '@/services/todos';
+import { LoadTodos, AddTodo } from '@/services/todos';
 import Character from '@/components/Character';
 import Task from '@/components/Task';
 
@@ -26,7 +26,7 @@ export default function TodoApp() {
   const [taskCount, setTaskCount] = useState(0);
 
   useEffect(() => {
-    setTasks(LoadTodos());
+    LoadTodos().then((todos) => setTasks(todos));
   }, []);
 
   // počet hotových tasků
@@ -42,7 +42,7 @@ export default function TodoApp() {
     if (newTask.trim() !== '') {
       const updatedTasks = [{ title: newTask, done: false }, ...tasks];
       setTasks(updatedTasks);
-      SaveTodos(updatedTasks);
+      AddTodo(newTask);
       setNewTask('');
     }
   };
@@ -51,7 +51,7 @@ export default function TodoApp() {
     const updatedTasks = [...tasks];
     updatedTasks.splice(index, 1);
     setTasks(updatedTasks);
-    SaveTodos(updatedTasks);
+    // SaveTodos(updatedTasks);
   };
 
   const handleToggleTask = (index) => {
@@ -61,7 +61,7 @@ export default function TodoApp() {
       done: !updatedTasks[index].done,
     };
     setTasks(updatedTasks);
-    SaveTodos(updatedTasks);
+    // SaveTodos(updatedTasks);
 
     if (updatedTasks[index].done) setTaskCount(taskCount + 1);
 
@@ -78,7 +78,7 @@ export default function TodoApp() {
       title: newTitle,
     };
     setTasks(updatedTasks);
-    SaveTodos(updatedTasks);
+    // SaveTodos(updatedTasks);
   };
 
   return (
@@ -91,10 +91,10 @@ export default function TodoApp() {
       </nav>
       <Container>
         <FilterBar>
-          <FilterButton onClick={() => setTasks(LoadTodos())}>All</FilterButton>
-          <FilterButton onClick={() => setTasks(LoadDoneTodos())}>
+          {/* <FilterButton onClick={() => setTasks(LoadTodos())}>All</FilterButton> */}
+          {/* <FilterButton onClick={() => setTasks(LoadDoneTodos())}>
             Done
-          </FilterButton>
+          </FilterButton> */}
         </FilterBar>
         <InputContainer onSubmit={handleAddTask}>
           <PlusIcon onClick={handleAddTask} />
