@@ -14,7 +14,7 @@ import {
   Money,
 } from '@/styles/Todolist';
 import Head from 'next/head';
-import { LoadTodos, AddTodo, DeleteTodo } from '@/services/todos';
+import { LoadTodos, AddTodo, DeleteTodo, ToggleTodo } from '@/services/todos';
 import Character from '@/components/Character';
 import Task from '@/components/Task';
 
@@ -40,9 +40,12 @@ export default function TodoApp() {
   const handleAddTask = (e) => {
     e.preventDefault();
     if (newTask.trim() !== '') {
-      const updatedTasks = [{ title: newTask, done: false }, ...tasks];
-      setTasks(updatedTasks);
-      AddTodo(newTask);
+      AddTodo(newTask).then((todo) => {
+        if (!todo) return;
+        const updatedTasks = [todo, ...tasks];
+        setTasks(updatedTasks);
+      });
+
       setNewTask('');
     }
   };
@@ -54,14 +57,14 @@ export default function TodoApp() {
     DeleteTodo(id);
   };
 
-  const handleToggleTask = (index) => {
+  const handleToggleTask = (index, id) => {
     const updatedTasks = [...tasks];
     updatedTasks[index] = {
       ...updatedTasks[index],
       done: !updatedTasks[index].done,
     };
     setTasks(updatedTasks);
-    // SaveTodos(updatedTasks);
+    ToggleTodo(id, updatedTasks[index].done);
 
     if (updatedTasks[index].done) setTaskCount(taskCount + 1);
 
@@ -111,7 +114,7 @@ export default function TodoApp() {
               <Task
                 key={index}
                 task={task}
-                onCheck={() => handleToggleTask(index)}
+                onCheck={() => handleToggleTask(index, task.id)}
                 onDelete={() => handleDeleteTask(index, task.id)}
                 onEdit={(newTitle) => handleEditTask(index, newTitle)}
               />
