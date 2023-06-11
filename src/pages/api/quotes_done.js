@@ -26,7 +26,7 @@ const quotesDone = [
   "You've earned a victory dance! Celebrate this achievement!",
   'Way to go! Your dedication and focus are truly inspiring!',
   "You're a task-master! Keep up the amazing work!",
-  "Congratulations on your accomplishment! The sky's the limit!",
+  "Congratulations $name on your accomplishment! The sky's the limit!",
   "$name, You're a superstar! Your dedication sets you apart!",
   '$name, You did it! Your determination is paving the way to success!',
   "Huzzah! You've just leveled up in the game of productivity!",
