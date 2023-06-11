@@ -44,7 +44,7 @@ export const TaskStyled = styled.li`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: ${Palette.purple_light};
+  background-color: ${(props) => props.color};
   padding: 10px;
   margin-bottom: 0.3rem;
   text-decoration: none;

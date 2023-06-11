@@ -7,11 +7,14 @@ import {
   StyledInput,
 } from './styled';
 import { FaPen } from 'react-icons/fa';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Palette } from '../ChangeTemplate';
+import { LoadUserProfile } from '@/services/user';
 
 export default function Task({ task, onCheck, onDelete, onEdit }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editTitle, setEditTitle] = useState(task.title);
+  const [color, setColor] = useState(Palette[0]);
 
   const handleEditTask = (e) => {
     e.preventDefault();
@@ -19,8 +22,14 @@ export default function Task({ task, onCheck, onDelete, onEdit }) {
     onEdit(editTitle);
   };
 
+  useEffect(() => {
+    LoadUserProfile().then((profile) => {
+      if (profile !== null) setColor(profile.color);
+    });
+  }, []);
+
   return (
-    <TaskStyled>
+    <TaskStyled color={color}>
       <Checkbox
         type="checkbox"
         checked={task.done}
