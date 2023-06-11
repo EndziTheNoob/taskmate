@@ -23,3 +23,8 @@ export const signOut = () => {
 export const getSession = () => {
   return supabase.auth.getSession();
 };
+
+export const getUserEmail = async () => {
+  const { data } = await getSession();
+  return data.session?.user.email;
+};
