@@ -2,12 +2,20 @@ import { supabase } from './supabase';
 import { getSession } from './user';
 
 export async function LoadTodos() {
-  const { data } = await supabase.from('todos').select();
+  const { data } = await supabase
+    .from('todos')
+    .select()
+    .order('created_at', { ascending: false });
   return data;
 }
 
-export function LoadDoneTodos() {
-  /* return LoadTodos().filter((todo) => todo.done); */
+export async function LoadDoneTodos() {
+  const { data } = await supabase
+    .from('todos')
+    .select()
+    .eq('done', true)
+    .order('created_at', { ascending: false });
+  return data;
 }
 
 export async function DeleteTodo(id) {
@@ -16,6 +24,10 @@ export async function DeleteTodo(id) {
 
 export async function ToggleTodo(id, done) {
   await supabase.from('todos').update({ done: done }).eq('id', id);
+}
+
+export async function EditTodo(id, title) {
+  await supabase.from('todos').update({ title: title }).eq('id', id);
 }
 
 export async function AddTodo(title) {

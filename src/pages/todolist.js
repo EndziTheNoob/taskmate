@@ -13,7 +13,14 @@ import {
   Money,
 } from '@/styles/Todolist';
 import Head from 'next/head';
-import { LoadTodos, AddTodo, DeleteTodo, ToggleTodo } from '@/services/todos';
+import {
+  LoadTodos,
+  AddTodo,
+  DeleteTodo,
+  ToggleTodo,
+  EditTodo,
+  LoadDoneTodos,
+} from '@/services/todos';
 import Character from '@/components/Character';
 import Task from '@/components/Task';
 import Header from '@/components/Header';
@@ -74,14 +81,14 @@ export default function TodoApp() {
     }
   };
 
-  const handleEditTask = (index, newTitle) => {
+  const handleEditTask = (index, newTitle, id) => {
     const updatedTasks = [...tasks];
     updatedTasks[index] = {
       ...updatedTasks[index],
       title: newTitle,
     };
     setTasks(updatedTasks);
-    // SaveTodos(updatedTasks);
+    EditTodo(id, newTitle);
   };
 
   return (
@@ -92,10 +99,16 @@ export default function TodoApp() {
       <Header />
       <Container>
         <FilterBar>
-          {/* <FilterButton onClick={() => setTasks(LoadTodos())}>All</FilterButton> */}
-          {/* <FilterButton onClick={() => setTasks(LoadDoneTodos())}>
+          <FilterButton
+            onClick={() => LoadTodos().then((todos) => setTasks(todos))}
+          >
+            All
+          </FilterButton>
+          <FilterButton
+            onClick={() => LoadDoneTodos().then((todos) => setTasks(todos))}
+          >
             Done
-          </FilterButton> */}
+          </FilterButton>
         </FilterBar>
         <InputContainer onSubmit={handleAddTask}>
           <PlusIcon onClick={handleAddTask} />
@@ -114,7 +127,7 @@ export default function TodoApp() {
                 task={task}
                 onCheck={() => handleToggleTask(index, task.id)}
                 onDelete={() => handleDeleteTask(index, task.id)}
-                onEdit={(newTitle) => handleEditTask(index, newTitle)}
+                onEdit={(newTitle) => handleEditTask(index, newTitle, task.id)}
               />
             ))}
           </TaskListContainer>
