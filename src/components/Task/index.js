@@ -30,7 +30,6 @@ export default function Task({ task, onCheck, onDelete, onEdit }) {
         </form>
       ) : (
         <span
-          type="text"
           style={{
             textDecoration: task.done ? 'line-through' : 'none',
             color: task.done ? 'darkgray' : 'black',
