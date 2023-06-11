@@ -36,7 +36,8 @@ export default function TodoApp() {
     setNewTask(e.target.value);
   };
 
-  const handleAddTask = () => {
+  const handleAddTask = (e) => {
+    e.preventDefault();
     if (newTask.trim() !== '') {
       const updatedTasks = [{ title: newTask, done: false }, ...tasks];
       setTasks(updatedTasks);
@@ -64,10 +65,14 @@ export default function TodoApp() {
     if (updatedTasks[index].done) setTaskDone(true);
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleAddTask();
-    }
+  const handleEditTask = (index, newTitle) => {
+    const updatedTasks = [...tasks];
+    updatedTasks[index] = {
+      ...updatedTasks[index],
+      title: newTitle,
+    };
+    setTasks(updatedTasks);
+    SaveTodos(updatedTasks);
   };
 
   return (
@@ -85,14 +90,13 @@ export default function TodoApp() {
             Done
           </FilterButton>
         </FilterBar>
-        <InputContainer>
+        <InputContainer onSubmit={handleAddTask}>
           <PlusIcon onClick={handleAddTask} />
           <Input
             type="text"
             value={newTask}
             onChange={handleInputChange}
             placeholder="Enter a new task"
-            onKeyPress={handleKeyPress}
           />
         </InputContainer>
         <TaskList>
@@ -103,6 +107,7 @@ export default function TodoApp() {
                 task={task}
                 onCheck={() => handleToggleTask(index)}
                 onDelete={() => handleDeleteTask(index)}
+                onEdit={(newTitle) => handleEditTask(index, newTitle)}
               />
             ))}
           </TaskListContainer>
