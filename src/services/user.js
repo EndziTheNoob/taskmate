@@ -9,7 +9,6 @@ export function LoadUserName() {
 }
 
 export const signUp = (email, password) => {
-  const supabase = getSupabase();
   return supabase.auth.signUp({ email, password });
 };
 

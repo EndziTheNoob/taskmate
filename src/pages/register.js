@@ -1,19 +1,8 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import axios from 'axios';
 import { FormStyle, Label, InputStyle, ButtonStyle } from '../styles/Register';
-
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .email('Invalid email address.')
-    .required('E-mail is required'),
-  password: yup
-    .string()
-    .min(8, 'Password needs to have at least 8 attributes')
-    .required('Password is required'),
-});
+import { signIn, signUp } from '../services/user';
+import { authSchema } from '../utils/authSchema';
 
 export default function RegisterForm() {
   const {
@@ -21,13 +10,14 @@ export default function RegisterForm() {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(authSchema),
   });
 
   const onSubmit = async (data) => {
     try {
-      // Odešlete data na server pomocí Supabase API nebo jiné metody dle vašeho výběru
-      await axios.post('/api/login', data);
+      await signUp(data.email, data.password).then(() =>
+        signIn(data.email, data.password),
+      );
 
       // Přesměrujte na stránku "setting"
       window.location.href = '/setting';
@@ -45,7 +35,7 @@ export default function RegisterForm() {
         {...register('email')}
         required
       />
-      {errors.email && <p>{errors.email.message}</p>}
+      {errors.email && <p>{errors.email.message.toString()}</p>}
       <Label>Create your password:</Label>
       <InputStyle
         type="password"
@@ -53,7 +43,7 @@ export default function RegisterForm() {
         {...register('password')}
         required
       />
-      {errors.password && <p>{errors.password.message}</p>}
+      {errors.password && <p>{errors.password.message.toString()}</p>}
       <ButtonStyle type="submit">Submit</ButtonStyle>
     </FormStyle>
   );
