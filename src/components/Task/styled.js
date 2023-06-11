@@ -68,3 +68,19 @@ export const EditButton = styled.button`
   cursor: pointer;
   align-self: right;
 `;
+
+export const StyledForm = styled.form`
+  flex-grow: 1;
+`;
+
+export const StyledInput = styled.input`
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 2px;
+  border-radius: 6px;
+
+  &:focus {
+    outline: none;
+  }
+`;

@@ -1,4 +1,11 @@
-import { TaskStyled, Checkbox, DeleteButton, EditButton } from './styled';
+import {
+  TaskStyled,
+  Checkbox,
+  DeleteButton,
+  EditButton,
+  StyledForm,
+  StyledInput,
+} from './styled';
 import { FaPen } from 'react-icons/fa';
 import { useState } from 'react';
 
@@ -20,14 +27,14 @@ export default function Task({ task, onCheck, onDelete, onEdit }) {
         onChange={() => onCheck()}
       />
       {isEditing ? (
-        <form onSubmit={handleEditTask}>
-          <input
+        <StyledForm onSubmit={handleEditTask}>
+          <StyledInput
             type="text"
             name="title"
             value={editTitle}
             onChange={(e) => setEditTitle(e.target.value)}
           />
-        </form>
+        </StyledForm>
       ) : (
         <span
           style={{
