@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
     "@supabase/supabase-js": "^2.24.0",
+    "axios": "^1.4.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
@@ -17,7 +19,9 @@
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "18.2.0",
     "react-hamburger-menu": "^1.2.1",
+    "react-hook-form": "^7.44.3",
     "react-icons": "^4.9.0",
-    "styled-components": "^6.0.0-rc.1"
+    "styled-components": "^6.0.0-rc.1",
+    "yup": "^1.2.0"
   }
 }

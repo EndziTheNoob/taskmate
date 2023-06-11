@@ -25,7 +25,7 @@ export default function Home() {
           <p>Absolutely free.</p>
           <p>Are you ready?</p>
           <ButtonStyle href="/setting" name="Log In"></ButtonStyle>
-          <ButtonStyle href="/setting" name="Register"></ButtonStyle>
+          <ButtonStyle href="/register" name="Register"></ButtonStyle>
         </Description>
         <TaskmateHomepage
           src="/img/Taskmate_Kafe.gif"
