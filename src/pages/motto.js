@@ -9,7 +9,9 @@ export default function Motto() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.quotable.io/quotes/random')
+    fetch(
+      'https://api.quotable.io/quotes/random?tags=motivational,inspirational',
+    )
       .then((response) => response.json())
       .then((data) => {
         setQuote(data[0].content);
@@ -32,9 +34,13 @@ export default function Motto() {
         <title>Motto</title>
       </Head>
       <Header />
-      <div>
+      <div style={{ display: 'flex', flexGrow: 1 }}>
         <CloudsContainer>
-          <Clouds src="/img/clouds.png" alt="clouds" />
+          <Clouds
+            src="/img/clouds.png"
+            alt="clouds"
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
           <QuoteStyle style={{ minHeight: `${dynamicHeight}px` }}>
             <p>{quote}</p>
             <p>- {author}</p>

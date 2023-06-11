@@ -8,19 +8,15 @@ export const Palette = {
 
 export const Clouds = styled.img`
   height: 100%;
-  bottom: 0px;
   opacity: 60%;
   object-fit: cover;
 `;
 
 export const CloudsContainer = styled.div`
-  position: relative;
-  bottom: 0;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-grow: 1;
 `;
 
 export const QuoteStyle = styled.div`

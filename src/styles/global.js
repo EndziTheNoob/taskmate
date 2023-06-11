@@ -24,10 +24,17 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
   background-color: var(--background-color);
+  
+  &>div:first-child {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 a {
