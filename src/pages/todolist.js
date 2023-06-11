@@ -14,7 +14,7 @@ import {
   Money,
 } from '@/styles/Todolist';
 import Head from 'next/head';
-import { LoadTodos, AddTodo } from '@/services/todos';
+import { LoadTodos, AddTodo, DeleteTodo } from '@/services/todos';
 import Character from '@/components/Character';
 import Task from '@/components/Task';
 
@@ -47,11 +47,11 @@ export default function TodoApp() {
     }
   };
 
-  const handleDeleteTask = (index) => {
+  const handleDeleteTask = (index, id) => {
     const updatedTasks = [...tasks];
     updatedTasks.splice(index, 1);
     setTasks(updatedTasks);
-    // SaveTodos(updatedTasks);
+    DeleteTodo(id);
   };
 
   const handleToggleTask = (index) => {
@@ -112,7 +112,7 @@ export default function TodoApp() {
                 key={index}
                 task={task}
                 onCheck={() => handleToggleTask(index)}
-                onDelete={() => handleDeleteTask(index)}
+                onDelete={() => handleDeleteTask(index, task.id)}
                 onEdit={(newTitle) => handleEditTask(index, newTitle)}
               />
             ))}

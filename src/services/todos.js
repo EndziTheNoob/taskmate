@@ -1,10 +1,6 @@
 import { supabase } from './supabase';
 import { getSession } from './user';
 
-export function SaveTodos(todos) {
-  localStorage.setItem('todos', JSON.stringify(todos));
-}
-
 export async function LoadTodos() {
   const { data } = await supabase.from('todos').select();
   return data;
@@ -12,6 +8,10 @@ export async function LoadTodos() {
 
 export function LoadDoneTodos() {
   /* return LoadTodos().filter((todo) => todo.done); */
+}
+
+export async function DeleteTodo(id) {
+  await supabase.from('todos').delete().eq('id', id);
 }
 
 export async function AddTodo(title) {
