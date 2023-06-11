@@ -24,7 +24,7 @@ export default function Task({ task, onCheck, onDelete, onEdit }) {
 
   useEffect(() => {
     LoadUserProfile().then((profile) => {
-      if (profile !== null) setColor(profile.color);
+      if (profile) setColor(profile.color);
     });
   }, []);
 

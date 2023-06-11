@@ -8,7 +8,7 @@ export default function Speaking({ type }) {
 
   useEffect(() => {
     LoadUserProfile().then((profile) => {
-      if (profile !== null) setName(profile.nickname);
+      if (profile) setName(profile.nickname);
     });
   }, []);
 
