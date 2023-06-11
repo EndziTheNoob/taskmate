@@ -55,7 +55,7 @@ export default function Character({ type, onAnimationComplete }) {
 
   useEffect(() => {
     const hasArrived = window.sessionStorage.getItem('hasArrived');
-    if (hasArrived) return;
+    if (type !== 'done' && hasArrived) return;
     setTimeout(() => {
       setShowBubble(true);
     }, 3000);
@@ -66,7 +66,10 @@ export default function Character({ type, onAnimationComplete }) {
 
   useEffect(() => {
     const hasArrived = window.sessionStorage.getItem('hasArrived');
-    if (hasArrived) return;
+    if (type !== 'done' && hasArrived) {
+      onAnimationComplete?.();
+      return;
+    }
     dispatch('Arrival');
     sessionStorage.setItem('hasArrived', 'Yes');
     setTimeout(() => {
