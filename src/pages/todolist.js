@@ -154,7 +154,7 @@ export default function TodoApp() {
           </MoneyContainer>
         </TaskList>
         <Character
-          type="morning"
+          type="greetings"
           onAnimationComplete={() => setFirstAnimationDone(true)}
         />
         {firstAnimationDone && taskDone ? (
