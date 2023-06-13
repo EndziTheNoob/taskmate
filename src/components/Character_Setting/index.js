@@ -51,7 +51,7 @@ export default function CharacterSetting({ onAnimationComplete }) {
   useEffect(() => {
     setTimeout(() => {
       setShowBubble(true);
-    }, 5000);
+    }, 3000);
   }, []);
 
   // Animation and timing of character
@@ -67,18 +67,19 @@ export default function CharacterSetting({ onAnimationComplete }) {
 
   return (
     <>
-      <BubbleContainer
-        onChange={() => showBubble}
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '33%',
-        }}
-      >
-        <BubbleContent>
-          <p>Hi! My name is Todoella! What is your name?</p>
-        </BubbleContent>
-      </BubbleContainer>
+      {showBubble && (
+        <BubbleContainer
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '33%',
+          }}
+        >
+          <BubbleContent>
+            <p>Hi! My name is Todoella! What is your name?</p>
+          </BubbleContent>
+        </BubbleContainer>
+      )}
       {picture}
     </>
   );

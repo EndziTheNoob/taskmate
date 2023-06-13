@@ -10,7 +10,7 @@ import CharacterSetting from '@/components/Character_Setting';
 import { useState } from 'react';
 
 export default function Setting() {
-  const [firstAnimationDone, setFirstAnimationDone] = useState(false);
+  const [showBubble, setShowBubble] = useState(false);
   return (
     <>
       <Head>
@@ -18,9 +18,7 @@ export default function Setting() {
       </Head>
       <SettingContainer>
         <NameForm id="nameForm" />
-        <CharacterSetting
-          onAnimationComplete={() => setFirstAnimationDone(true)}
-        />
+        <CharacterSetting onAnimationComplete={() => showBubble} />
         <ButtonsContainer>
           <ButtonStyle href="/" name="Back" />
           <ButtonStyled form="nameForm">Next</ButtonStyled>
