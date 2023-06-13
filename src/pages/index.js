@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import { TaskmateHomepage, Main, Description, Logo } from '../styles/Index';
-import ButtonStyle from '@/components/Link';
 import ButtonLink from '@/components/Link';
 
 // uprava fontu
