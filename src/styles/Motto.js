@@ -36,4 +36,5 @@ export const QuoteStyle = styled.div`
   box-shadow: -3px 4px rgb(129, 129, 129);
   font-family: var(--font-mono);
   text-align: center;
+  min-width: 20rem;
 `;
