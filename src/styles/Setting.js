@@ -29,7 +29,7 @@ export const TaskmateSetting = styled.img`
   z-index: 1;
 `;
 
-export const BubbleSetting = styled.div`
+/* export const BubbleSetting = styled.div`
   position: relative;
   width: 400px;
   height: 200px;
@@ -44,7 +44,7 @@ export const BubbleImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`;
+`; */
 
 export const ButtonStyled = styled.button`
   text-decoration: none;

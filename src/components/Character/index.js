@@ -53,6 +53,7 @@ export default function Character({ type, onAnimationComplete }) {
   const [picture, dispatch] = useReducer(animationReducer, null);
   const [showBubble, setShowBubble] = useState(false);
 
+  // Animation and timing of conversation bubble
   useEffect(() => {
     /*     const hasArrived = window.sessionStorage.getItem('hasArrived');
     if (type !== 'done' && hasArrived) return; */
@@ -64,6 +65,7 @@ export default function Character({ type, onAnimationComplete }) {
     }, 12000);
   }, []);
 
+  // Animation and timing of character
   useEffect(() => {
     /* const hasArrived = window.sessionStorage.getItem('hasArrived'); */
     /*  if (type !== 'done' && hasArrived) {
