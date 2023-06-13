@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { Palette } from '../../styles/palette';
 
 export const InputStyle = styled.input`
   text-decoration: none;
-  color: black;
+  color: ${Palette.black};
   font-size: 1.2rem;
-  background-color: white;
+  background-color: ${Palette.white};
   padding: 0.5rem 2rem;
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);

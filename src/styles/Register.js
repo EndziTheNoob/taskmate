@@ -1,10 +1,5 @@
 import styled from 'styled-components';
-
-const Palette = {
-  buttonColor: '#F4EDF9',
-  buttonWhite: 'white',
-  purple_light: '#F4EDF9',
-};
+import { Palette } from './palette';
 
 export const FormStyle = styled.form`
   display: flex;
@@ -22,9 +17,9 @@ export const Label = styled.label`
 
 export const InputStyle = styled.input`
   text-decoration: none;
-  color: black;
+  color: ${Palette.black};
   font-size: 1rem;
-  background-color: white;
+  background-color: ${Palette.white};
   padding: 0.5rem 2rem;
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);
@@ -37,7 +32,7 @@ export const InputStyle = styled.input`
 
 export const ButtonStyle = styled.button`
   text-decoration: none;
-  color: black;
+  color: ${Palette.black};
   font-size: 0.8rem;
   background-color: ${Palette.purple_light};
   padding: 0.8rem 2rem;
@@ -53,7 +48,7 @@ export const ButtonStyle = styled.button`
 
   &:hover,
   &:active {
-    background-color: ${Palette.buttonColor};
+    background-color: ${Palette.purple_light};
     transform: translateY(5px);
   }
 `;

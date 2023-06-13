@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 import { FaPlus } from 'react-icons/fa';
-
-export const Palette = {
-  purple_light: '#F4EDF9',
-  gray_dark: '#666666',
-  gray_light: 'lightgray',
-  blue_dark: '#DAEFFF',
-};
+import { Palette } from './palette';
 
 export const Container = styled.div`
   display: flex;
@@ -59,9 +53,9 @@ export const InputContainer = styled.form`
 export const Input = styled.input`
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: ${Palette.black};
   font-size: 0.8rem;
-  background-color: white;
+  background-color: ${Palette.white};
   padding: 0.5rem 2rem;
   border: black solid 0.1rem;
   box-shadow: -3px 4px rgb(129, 129, 129);
@@ -80,7 +74,7 @@ export const Input = styled.input`
 export const PlusIcon = styled(FaPlus)`
   position: absolute;
   left: 2rem;
-  color: black;
+  color: ${Palette.black};
   cursor: pointer;
   z-index: 1;
 `;

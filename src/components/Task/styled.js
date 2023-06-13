@@ -1,12 +1,5 @@
 import styled from 'styled-components';
-
-export const Palette = {
-  purple_light: '#F4EDF9',
-  gray_dark: '#666666',
-  gray_light: 'lightgray',
-  blue_dark: '#DAEFFF',
-  dark_purple: '#b6acbd',
-};
+import { Palette } from '../../styles/palette';
 
 export const DeleteButton = styled.button`
   background-color: transparent;
@@ -25,7 +18,7 @@ export const Checkbox = styled.input.attrs({
   border: 1px solid #aaa;
   border-radius: 50%; /* Rounded shape */
   margin-left: -1rem;
-  background-color: white;
+  background-color: ${Palette.white};
   cursor: pointer;
   flex-shrink: 0;
 
@@ -48,7 +41,7 @@ export const TaskStyled = styled.li`
   padding: 10px;
   margin-bottom: 0.3rem;
   text-decoration: none;
-  color: black;
+  color: ${Palette.black};
   font-size: 0.8rem;
   padding: 0.5rem 2rem;
   border: black solid 0.1rem;
@@ -80,7 +73,7 @@ export const StyledForm = styled.form`
 
 export const StyledInput = styled.input`
   width: 100%;
-  background: white;
+  background: ${Palette.white};
   border: none;
   padding: 2px;
   border-radius: 6px;

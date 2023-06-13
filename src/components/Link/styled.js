@@ -1,15 +1,11 @@
 import styled from 'styled-components';
-
-const Palette = {
-  buttonColor: '#F4EDF9',
-  buttonWhite: 'white',
-};
+import { Palette } from '../../styles/palette';
 
 export const ButtonStyle = styled.div`
   text-decoration: none;
-  color: black;
+  color: ${Palette.black};
   font-size: 0.8rem;
-  background-color: ${Palette.buttonWhite};
+  background-color: ${Palette.white};
   padding: 0.8rem 2rem;
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);
@@ -23,7 +19,7 @@ export const ButtonStyle = styled.div`
 
   &:hover,
   &:active {
-    background-color: ${Palette.buttonColor};
+    background-color: ${Palette.purple_light};
     transform: translateY(5px);
   }
 

@@ -1,15 +1,11 @@
 import styled from 'styled-components';
-
-const Palette = {
-  purple_light: '#b6acbd',
-  gray_dark: '#666666',
-};
+import { Palette } from '../../styles/palette';
 
 export const FooterStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${Palette.purple_light};
+  background-color: ${Palette.purple_dark};
   width: 100%;
   height: 3rem;
   text-align: center;

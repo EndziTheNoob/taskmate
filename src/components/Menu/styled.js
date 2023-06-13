@@ -1,9 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-
-const Palette = {
-  purple_light: '#b6acbd',
-  gray_dark: '#666666',
-};
+import { Palette } from '../../styles/palette';
 
 const unfoldAnimation = keyframes`
   from {
@@ -19,9 +15,9 @@ export const MenuStyle = styled.div`
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: black;
+  color: ${Palette.black};
   font-size: 0.8rem;
-  background-color: white;
+  background-color: ${Palette.white};
   padding: 0.5rem 2rem;
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);

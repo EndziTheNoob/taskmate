@@ -26,7 +26,7 @@ export const Circle = styled.div`
 
   &:hover,
   &:active {
-    filter: brightness(110%);
+    filter: brightness(95%);
     transform: translateY(5px);
   }
 `;

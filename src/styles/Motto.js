@@ -1,10 +1,5 @@
 import styled from 'styled-components';
-
-export const Palette = {
-  purple_light: '#F4EDF9',
-  gray_dark: '#666666',
-  white_color: '#ffffff',
-};
+import { Palette } from './palette';
 
 export const Clouds = styled.img`
   height: 100%;
@@ -24,10 +19,10 @@ export const QuoteStyle = styled.div`
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  background-color: ${Palette.white_color};
+  background-color: ${Palette.white};
   border-radius: 10px;
   padding: 20px;
-  color: black;
+  color: ${Palette.black};
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;

@@ -2,7 +2,7 @@ import { Container } from './styled';
 import { Circle, Colors } from './styled';
 import { useState } from 'react';
 
-export const Palette = ['#F4EDF9', '#FFC8DD', '#A8D8FF'];
+export const Palette = ['#F4EDF9', '#FFD9E6', '#CCE8FF'];
 
 export default function ChangeTemplate({ onSelect, defaultColor }) {
   const [selectedColor, setSelectedColor] = useState(defaultColor);

@@ -8,10 +8,6 @@ export const GlobalStyles = createGlobalStyle`
   --font-todolist: 'Inter', sans-serif;
 
   --background-color: #F1F9FF;
-  --color-purple: #b6acbd;
-  --color-lightblue: #F1F9FF;
-  --color-lightpurple: #F4EDF9;
-  --color-gray: #F3F3F3;
 }
 
 * {

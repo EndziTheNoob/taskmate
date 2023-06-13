@@ -1,11 +1,5 @@
 import styled from 'styled-components';
-
-export const Palette = {
-  purple_light: '#F4EDF9',
-  gray_dark: '#666666',
-  buttonColor: '#F4EDF9',
-  buttonWhite: 'white',
-};
+import { Palette } from './palette';
 
 export const SettingContainer = styled.div`
   display: flex;
@@ -29,28 +23,11 @@ export const TaskmateSetting = styled.img`
   z-index: 1;
 `;
 
-/* export const BubbleSetting = styled.div`
-  position: relative;
-  width: 400px;
-  height: 200px;
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  bottom: 0rem;
-  left: -4rem;
-`;
-
-export const BubbleImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`; */
-
 export const ButtonStyled = styled.button`
   text-decoration: none;
-  color: black;
+  color: ${Palette.black};
   font-size: 0.8rem;
-  background-color: ${Palette.buttonWhite};
+  background-color: ${Palette.white};
   padding: 0.5rem 2rem;
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);
@@ -64,7 +41,7 @@ export const ButtonStyled = styled.button`
 
   &:hover,
   &:active {
-    background-color: ${Palette.buttonColor};
+    background-color: ${Palette.purple_light};
     transform: translateY(5px);
   }
 `;

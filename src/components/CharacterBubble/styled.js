@@ -1,9 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-
-const Palette = {
-  bubbleBlack: '#000000',
-  bubbleWhite: '#ffffff',
-};
+import { Palette } from '../../styles/palette';
 
 const zoomIn = keyframes`
   from {
@@ -28,11 +24,11 @@ export const BubbleContent = styled.div`
   position: relative;
   display: inline-block;
   padding: 1rem;
-  border: 2px solid ${Palette.bubbleBlacks};
-  background-color: ${Palette.bubbleWhite};
+  border: 2px solid ${Palette.black};
+  background-color: ${Palette.white};
   border-radius: 22px;
   box-shadow: -3px 4px rgb(129, 129, 129);
-  color: ${Palette.bubbleBlacks};
+  color: ${Palette.black};
   font-size: 0.8rem;
   white-space: pre-line;
   min-width: 40%;
