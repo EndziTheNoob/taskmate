@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Palette } from './palette';
+import { Palette } from './Palette';
 
 export const Clouds = styled.img`
   height: 100%;

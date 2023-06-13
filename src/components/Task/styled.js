@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Palette } from '../../styles/palette';
+import { Palette } from '../../styles/Palette';
 
 export const DeleteButton = styled.button`
   background-color: transparent;

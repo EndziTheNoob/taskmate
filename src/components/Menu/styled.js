@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { Palette } from '../../styles/palette';
+import { Palette } from '../../styles/Palette';
 
 const unfoldAnimation = keyframes`
   from {

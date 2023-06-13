@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FaPlus } from 'react-icons/fa';
-import { Palette } from './palette';
+import { Palette } from './Palette';
 
 export const Container = styled.div`
   display: flex;

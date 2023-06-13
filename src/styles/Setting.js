@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Palette } from './palette';
+import { Palette } from './Palette';
 
 export const SettingContainer = styled.div`
   display: flex;
