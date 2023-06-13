@@ -43,7 +43,7 @@ function animationReducer(state, action) {
   }
 }
 
-export default function CharacterSetting({ onAnimationComplete }) {
+export default function CharacterSetting() {
   const [picture, dispatch] = useReducer(animationReducer, null);
   const [showBubble, setShowBubble] = useState(false);
 
