@@ -5,6 +5,7 @@ export const Nav = styled.nav`
   justify-content: end;
   padding-top: 2rem;
   padding-right: 2rem;
+  padding-bottom: 1rem;
   gap: 1rem;
   align-items: center;
   & > button {
