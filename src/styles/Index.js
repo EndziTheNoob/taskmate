@@ -34,6 +34,7 @@ export const Logo = styled.img`
   position: relative;
   max-width: 100%;
   height: auto;
+  margin-bottom: 2rem;
 `;
 
 export const TaskmateHomepage = styled.img`
@@ -45,4 +46,12 @@ export const TaskmateHomepage = styled.img`
     width: 200px;
     height: 200px;
   }
+`;
+
+export const ButtonsContainerLog = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 `;

@@ -5,8 +5,8 @@ export const Container = styled.div`
   font-family: var(--font-mono);
   display: flex;
   flex-direction: column;
-  margin-top: -7rem;
   text-align: center;
+  margin-top: -12rem;
 `;
 
 export const Colors = styled.div`

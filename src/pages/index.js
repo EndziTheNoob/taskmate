@@ -1,6 +1,12 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
-import { TaskmateHomepage, Main, Description, Logo } from '../styles/Index';
+import {
+  TaskmateHomepage,
+  Main,
+  Description,
+  Logo,
+  ButtonsContainerLog,
+} from '../styles/Index';
 import ButtonLink from '@/components/Link';
 
 // uprava fontu
@@ -24,8 +30,10 @@ export default function Home() {
           <p>To-Do list for those who need to push a little bit.</p>
           <p>Absolutely free.</p>
           <p>Are you ready?</p>
-          <ButtonLink href="/login" name="Log In" />
-          <ButtonLink href="/register" name="Register" />
+          <ButtonsContainerLog>
+            <ButtonLink href="/login" name="Log In" />
+            <ButtonLink href="/register" name="Register" />
+          </ButtonsContainerLog>
         </Description>
         <TaskmateHomepage
           src="/img/Taskmate_Kafe.gif"

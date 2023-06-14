@@ -6,13 +6,39 @@ export const ButtonStyle = styled.div`
   color: ${Palette.black};
   font-size: 0.8rem;
   background-color: ${Palette.white};
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 2rem;
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);
   border-radius: 12px;
-  width: 11rem;
-  height: 3rem;
-  margin: 1rem;
+  width: 10rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:active {
+    background-color: ${Palette.purple_light};
+    transform: translateY(5px);
+  }
+
+  a {
+    font-size: 1rem;
+  }
+`;
+
+export const ButtonStyle2 = styled.div`
+  text-decoration: none;
+  color: ${Palette.black};
+  font-size: 0.8rem;
+  background-color: ${Palette.white};
+  padding: 0.5rem 2rem;
+  border: black solid 0.2rem;
+  box-shadow: -3px 4px rgb(129, 129, 129);
+  border-radius: 12px;
+  width: 10rem;
   text-align: center;
   font-family: var(--font-mono);
   cursor: pointer;
