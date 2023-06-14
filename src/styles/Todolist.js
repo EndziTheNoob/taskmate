@@ -13,6 +13,14 @@ export const Container = styled.div`
   max-width: 100%;
   margin-left: 25%;
   margin-right: 25%;
+
+  @media (max-width: 576px) {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 40%;
+    margin-top: 30%;
+  }
 `;
 
 export const TaskList = styled.ul`
@@ -48,6 +56,10 @@ export const InputContainer = styled.form`
   margin-bottom: 2rem;
   position: relative;
   padding: 1rem;
+
+  @media (max-width: 576px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 export const Input = styled.input`
