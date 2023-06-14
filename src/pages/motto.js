@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { Clouds, CloudsContainer, QuoteStyle } from '../styles/Motto.js';
 import Header from '@/components/Header/index.js';
+import { FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteRight } from 'react-icons/fa';
 
 export default function Motto() {
   const [quote, setQuote] = useState('');
@@ -34,6 +36,7 @@ export default function Motto() {
         <title>Motto</title>
       </Head>
       <Header />
+
       <div style={{ display: 'flex', flexGrow: 1 }}>
         <CloudsContainer>
           <Clouds
@@ -42,8 +45,16 @@ export default function Motto() {
             style={{ height: '100%', width: '100%', objectFit: 'cover' }}
           />
           <QuoteStyle style={{ minHeight: `${dynamicHeight}px` }}>
+            <FaQuoteLeft
+              size={24}
+              style={{ position: 'absolute', top: -30, left: -30 }}
+            />
             <p>{quote}</p>
             <p>- {author}</p>
+            <FaQuoteRight
+              size={24}
+              style={{ position: 'absolute', bottom: -30, right: -30 }}
+            />
           </QuoteStyle>
         </CloudsContainer>
       </div>
