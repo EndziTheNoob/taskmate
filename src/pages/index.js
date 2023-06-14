@@ -8,6 +8,8 @@ import {
   ButtonsContainerLog,
 } from '../styles/Index';
 import { ButtonLink } from '@/components/Link';
+import { MdOutlineArrowBackIosNew } from 'react-icons/md';
+import { MdOutlineArrowForwardIos } from 'react-icons/md';
 
 // uprava fontu
 const inter = Inter({ subsets: ['latin'] });
@@ -29,7 +31,14 @@ export default function Home() {
           />
           <p>To-Do list for those who need to push a little bit.</p>
           <p>Absolutely free.</p>
-          <p>Are you ready?</p>
+          <p>
+            <MdOutlineArrowForwardIos
+              size={15}
+              style={{ marginRight: '7px' }}
+            />
+            Are you ready?
+            <MdOutlineArrowBackIosNew size={15} style={{ marginLeft: '7px' }} />
+          </p>
           <ButtonsContainerLog>
             <ButtonLink href="/login" name="Log In" />
             <ButtonLink href="/register" name="Register" />
