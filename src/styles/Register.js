@@ -18,13 +18,13 @@ export const Label = styled.label`
 export const InputStyle = styled.input`
   text-decoration: none;
   color: ${Palette.black};
-  font-size: 1rem;
+  font-size: 0.8rem;
   background-color: ${Palette.white};
   padding: 0.5rem 2rem;
   border: black solid 0.2rem;
   box-shadow: -3px 4px rgb(129, 129, 129);
   border-radius: 12px;
-  width: 20rem;
+  width: 21rem;
   height: 4rem;
   font-family: var(--font-mono);
   margin: 1rem;
