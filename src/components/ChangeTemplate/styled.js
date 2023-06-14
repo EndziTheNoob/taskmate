@@ -5,7 +5,8 @@ export const Container = styled.div`
   font-family: var(--font-mono);
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin-top: -7rem;
+  text-align: center;
 `;
 
 export const Colors = styled.div`
@@ -16,9 +17,12 @@ export const Colors = styled.div`
 export const Circle = styled.div`
   background-color: ${(props) => props.color};
   border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  border: black solid ${(props) => (props.selected ? '0.2rem' : '0.1rem')};
+  width: 60px;
+  height: 60px;
+  border: black solid
+    ${(props) =>
+      // @ts-ignore
+      props.selected ? '0.2rem' : '0.1rem'};
   gap: 1rem;
   margin: 0.5rem;
   box-shadow: -3px 4px rgb(129, 129, 129);

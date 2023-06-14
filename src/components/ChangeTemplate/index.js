@@ -19,6 +19,7 @@ export default function ChangeTemplate({ onSelect, defaultColor }) {
               onSelect(color);
               setSelectedColor(color);
             }}
+            // @ts-ignore
             selected={selectedColor === color}
           />
         ))}
