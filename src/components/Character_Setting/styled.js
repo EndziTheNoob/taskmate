@@ -15,6 +15,13 @@ export const TaskmateFly = styled.img`
   left: 20%;
   z-index: 1;
   animation: ${fly} 1s linear;
+
+  @media (max-width: 768px) {
+    /* Adjust the positioning for smaller screens */
+    transform: none;
+    bottom: 2rem;
+    left: 10%;
+  }
 `;
 
 export const TaskmateDrop = styled.img`
@@ -22,6 +29,13 @@ export const TaskmateDrop = styled.img`
   bottom: 2rem;
   left: 20%;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    /* Adjust the positioning for smaller screens */
+    transform: none;
+    bottom: 2rem;
+    left: 10%;
+  }
 `;
 
 export const TaskmateTalking = styled.img`
@@ -30,4 +44,11 @@ export const TaskmateTalking = styled.img`
   left: 20%;
   z-index: 1;
   scale: -1 1;
+
+  @media (max-width: 768px) {
+    /* Adjust the positioning for smaller screens */
+    transform: none;
+    bottom: 2rem;
+    left: 10%;
+  }
 `;

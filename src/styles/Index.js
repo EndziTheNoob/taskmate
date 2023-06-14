@@ -7,6 +7,11 @@ export const Main = styled.main`
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    padding-top: 4rem;
+  }
 `;
 
 export const Description = styled.div`

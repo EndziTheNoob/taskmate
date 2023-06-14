@@ -7,7 +7,7 @@ import {
   Logo,
   ButtonsContainerLog,
 } from '../styles/Index';
-import ButtonLink from '@/components/Link';
+import { ButtonLink } from '@/components/Link';
 
 // uprava fontu
 const inter = Inter({ subsets: ['latin'] });

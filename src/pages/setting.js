@@ -5,7 +5,7 @@ import {
   ButtonsContainer,
   ButtonStyled,
 } from '../styles/Setting';
-import ButtonStyle2 from '@/components/Link';
+import { ButtonLinkSetting } from '@/components/Link';
 import CharacterSetting from '@/components/Character_Setting';
 
 export default function Setting() {
@@ -18,7 +18,7 @@ export default function Setting() {
         <NameForm id="nameForm" />
         <CharacterSetting />
         <ButtonsContainer>
-          <ButtonStyle2 href="/" name="Back" />
+          <ButtonLinkSetting href="/" name="Back" />
           <ButtonStyled form="nameForm">Next</ButtonStyled>
         </ButtonsContainer>
       </SettingContainer>

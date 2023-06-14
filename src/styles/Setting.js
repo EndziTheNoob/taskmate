@@ -8,6 +8,11 @@ export const SettingContainer = styled.div`
   align-items: center;
   padding: 4rem;
   min-height: 100vh;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    padding-top: 3rem;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -16,6 +21,10 @@ export const ButtonsContainer = styled.div`
   width: 100%;
   align-items: center;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
 `;
 
 export const TaskmateSetting = styled.img`
@@ -44,5 +53,11 @@ export const ButtonStyled = styled.button`
   &:active {
     background-color: ${Palette.purple_light};
     transform: translateY(5px);
+  }
+
+  @media (max-width: 768px) {
+    width: 6rem;
+    padding: 0.2rem 1rem;
+    z-index: 1;
   }
 `;

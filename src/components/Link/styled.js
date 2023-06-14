@@ -29,7 +29,7 @@ export const ButtonStyle = styled.div`
   }
 `;
 
-export const ButtonStyle2 = styled.div`
+export const ButtonStyleSetting = styled.div`
   text-decoration: none;
   color: ${Palette.black};
   font-size: 0.8rem;
@@ -52,5 +52,11 @@ export const ButtonStyle2 = styled.div`
   a {
     font-size: 1rem;
     padding: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 6rem;
+    padding: 0.2rem 1rem;
+    z-index: 1;
   }
 `;

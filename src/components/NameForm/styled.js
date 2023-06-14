@@ -22,6 +22,11 @@ export const InputStyle = styled.input`
 export const FormStyle = styled.form`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    margin-bottom: -8rem;
+    margin-top: 1rem;
+  }
 `;
 
 export const Label = styled.label`
