@@ -18,10 +18,6 @@ export const BubbleContainer = styled.div`
   animation-name: ${zoomIn};
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
-
-  @media (max-width: 768px) {
-    right: 1rem;
-  }
 `;
 
 export const BubbleContent = styled.div`

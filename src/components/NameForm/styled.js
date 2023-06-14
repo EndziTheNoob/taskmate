@@ -23,8 +23,8 @@ export const FormStyle = styled.form`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 768px) {
-    margin-bottom: -8rem;
+  @media (min-width: 576px) {
+    margin-bottom: -6rem;
     margin-top: 1rem;
   }
 `;
