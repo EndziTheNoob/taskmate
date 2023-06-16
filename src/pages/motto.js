@@ -16,8 +16,8 @@ export default function Motto() {
     )
       .then((response) => response.json())
       .then((data) => {
-        setQuote(data[0].content);
-        setAuthor(data[0].author);
+        setQuote(data.content);
+        setAuthor(data.author);
         setIsLoading(false);
       })
       .catch((error) => console.error(error));
