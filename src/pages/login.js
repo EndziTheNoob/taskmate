@@ -4,7 +4,11 @@ import AuthForm from '@/components/AuthForm';
 export default function LoginForm() {
   const onSubmit = async (data) => {
     try {
-      await signIn(data.email, data.password);
+      const { error } = await signIn(data.email, data.password);
+      if (error) {
+        console.log(error);
+        return;
+      }
 
       // Přesměrujte na stránku "todolist"
       window.location.href = '/todolist';
@@ -13,5 +17,5 @@ export default function LoginForm() {
     }
   };
 
-  return <AuthForm onSubmit={onSubmit} passwordLabel={"Password:"}/>;
+  return <AuthForm onSubmit={onSubmit} passwordLabel={'Password:'} />;
 }
