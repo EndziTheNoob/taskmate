@@ -16,9 +16,11 @@ export default function Motto() {
     )
       .then((response) => response.json())
       .then((data) => {
-        setQuote(data.content);
-        setAuthor(data.author);
+        const randomIndex = Math.floor(Math.random() * data.length);
+        setQuote(data[randomIndex].content);
+        setAuthor(data[randomIndex].author);
         setIsLoading(false);
+        console.log(data);
       })
       .catch((error) => console.error(error));
   }, []);
