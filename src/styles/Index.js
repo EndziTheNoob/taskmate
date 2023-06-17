@@ -58,8 +58,9 @@ export const TaskmateHomepage = styled.img`
   bottom: 2rem;
   left: 2rem;
   z-index: 1;
-  @media (max-width: 375px),
-    (-webkit-min-device-width: 375px) and (-webkit-max-device-width: 812px) {
+  width: 300px;
+  height: 300px;
+  @media (max-width: 375px) {
     width: 150px;
     height: 150px;
     bottom: 1rem;
