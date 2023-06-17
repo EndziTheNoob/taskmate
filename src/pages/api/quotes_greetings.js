@@ -24,7 +24,7 @@ const quotesGreetings = [
   "Hi $name! Let's kick-start our day by turning our to-do list into a game of achievements!",
 ];
 
-// Generování hlášek, aby se generovali postupně, jak jdou za sebou
+// Generating of quotes sequentially
 let currentQuoteIndex = 0;
 export default function handler(req, res) {
   const currentQuote = quotesGreetings[currentQuoteIndex];
@@ -32,13 +32,13 @@ export default function handler(req, res) {
   res.status(200).json({ quote: currentQuote });
 }
 
-//generování hlášek random
+//Code for random generating
 // export default function handler(req, res) {
 //   const randomIndex = Math.floor(Math.random() * quotesGreetings.length);
 //   const randomQuote = quotesGreetings[randomIndex];
 //   res.status(200).json({ quote: randomQuote });
 // }
 
-//zobrazení hlášky: {"quote":"Rise and shine, my friend! Time to conquer the day with boundless enthusiasm!"}
+//Quote display: {"quote":"Rise and shine, my friend! Time to conquer the day with boundless enthusiasm!"}
 
-//adresa API : http://localhost:3000/api/quotes_Greetings
+//API address: http://localhost:3000/api/quotes_Greetings

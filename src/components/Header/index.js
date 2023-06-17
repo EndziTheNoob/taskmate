@@ -21,7 +21,7 @@ const Header = () => {
     signOut().then(() => {
       setUserEmail(null);
       window.location.href = '/';
-      // přesměruje uživatele na home-page
+      // redirection of user at home-page
     });
   };
 

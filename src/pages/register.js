@@ -12,7 +12,7 @@ export default function RegisterForm() {
         return;
       }
 
-      // Přesměrujte na stránku "setting"
+      // Redirect user at "setting"
       window.location.href = '/setting';
     } catch (error) {
       console.log(error);

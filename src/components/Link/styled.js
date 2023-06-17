@@ -26,6 +26,7 @@ export const ButtonStyle = styled.div`
 
   a {
     font-size: 1rem;
+    font-family: 'Krona One';
   }
 `;
 
@@ -52,6 +53,7 @@ export const ButtonStyleSetting = styled.div`
   a {
     font-size: 1rem;
     padding: 0.8rem;
+    font-family: 'Krona One';
   }
 
   @media (max-width: 768px) {

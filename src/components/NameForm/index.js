@@ -36,5 +36,3 @@ export default function NameForm({ id }) {
     </>
   );
 }
-
-//zatím se vypíše vepsané jméno do konzole

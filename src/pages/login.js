@@ -10,7 +10,7 @@ export default function LoginForm() {
         return;
       }
 
-      // Přesměrujte na stránku "todolist"
+      // Redirect user at "todolist"
       window.location.href = '/todolist';
     } catch (error) {
       console.log(error);

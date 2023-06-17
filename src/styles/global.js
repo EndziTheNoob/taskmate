@@ -1,13 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
+import { Palette } from './Palette';
 
 export const GlobalStyles = createGlobalStyle`
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
   --font-mono: 'Krona One';
   --font-todolist: 'Inter', sans-serif;
-
-  --background-color: #F1F9FF;
+ 
 }
 
 * {
@@ -24,7 +22,7 @@ body {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: ${Palette.blue_light};
   
   &>div:first-child {
     display: flex;

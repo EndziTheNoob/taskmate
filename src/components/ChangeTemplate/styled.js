@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: -12rem;
+  margin-top: -10rem;
 `;
 
 export const Colors = styled.div`

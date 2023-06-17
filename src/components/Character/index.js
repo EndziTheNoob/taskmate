@@ -53,7 +53,7 @@ export default function Character({ type, onAnimationComplete }) {
   const [picture, dispatch] = useReducer(animationReducer, null);
   const [showBubble, setShowBubble] = useState(false);
 
-  // Animation and timing of conversation bubble
+  // Animation and timing of conversation bubble; Code is commented so the animation will run immediately for better presentation. Otherwise it runs only once user enters the app.
   useEffect(() => {
     /*     const hasArrived = window.sessionStorage.getItem('hasArrived');
     if (type !== 'done' && hasArrived) return; */
