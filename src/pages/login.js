@@ -1,9 +1,22 @@
 import { signIn } from '../services/user';
 import AuthForm from '@/components/AuthForm';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function LoginForm() {
   const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    if (errorMessage) {
+      const timer = setTimeout(() => {
+        setErrorMessage('');
+      }, 5000); 
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [errorMessage]);
+
   const onSubmit = async (data) => {
     try {
       const { error } = await signIn(data.email, data.password);

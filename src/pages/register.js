@@ -1,9 +1,22 @@
 import { signIn, signUp } from '../services/user';
 import AuthForm from '@/components/AuthForm';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function RegisterForm() {
   const [errorEmail, setErrorEmail] = useState('');
+
+  useEffect(() => {
+    if (errorEmail) {
+      const timer = setTimeout(() => {
+        setErrorEmail('');
+      }, 5000);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [errorEmail]);
+
   const onSubmit = async (data) => {
     try {
       const { error } = await signUp(data.email, data.password).then(() =>
@@ -15,7 +28,7 @@ export default function RegisterForm() {
         return;
       }
 
-      // Redirect user at "setting"
+      // Redirect user to "/setting"
       window.location.href = '/setting';
     } catch (error) {
       console.log(error);
