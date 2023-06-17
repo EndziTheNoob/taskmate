@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="icon" href="img/Taskmate_icon.jpg" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
