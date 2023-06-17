@@ -12,11 +12,6 @@ export const Main = styled.main`
     padding: 2rem;
     padding-top: 4rem;
   }
-
-  @media only screen and (max-width: 375px),
-    only screen and (-webkit-min-device-width: 375px) and (-webkit-max-device-width: 812px) {
-    padding: 1rem;
-  }
 `;
 
 export const Description = styled.div`
@@ -29,8 +24,7 @@ export const Description = styled.div`
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
-  @media (max-width: 375px),
-    (-webkit-min-device-width: 375px) and (-webkit-max-device-width: 812px) {
+  @media (max-width: 375px) {
     font-size: 1rem;
   }
 
@@ -46,11 +40,6 @@ export const Logo = styled.img`
   max-width: 100%;
   height: auto;
   margin-bottom: 2rem;
-
-  @media (max-width: 375px),
-    (-webkit-min-device-width: 375px) and (-webkit-max-device-width: 812px) {
-    margin-bottom: 1rem;
-  }
 `;
 
 export const TaskmateHomepage = styled.img`
@@ -58,13 +47,9 @@ export const TaskmateHomepage = styled.img`
   bottom: 2rem;
   left: 2rem;
   z-index: 1;
-  width: 300px;
-  height: 300px;
   @media (max-width: 375px) {
-    width: 150px;
-    height: 150px;
-    bottom: 1rem;
-    left: 1rem;
+    width: 200px;
+    height: 200px;
   }
 `;
 
@@ -74,9 +59,4 @@ export const ButtonsContainerLog = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-
-  @media (max-width: 375px),
-    (-webkit-min-device-width: 375px) and (-webkit-max-device-width: 812px) {
-    margin-top: 0.5rem;
-  }
 `;

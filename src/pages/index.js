@@ -44,7 +44,12 @@ export default function Home() {
             <ButtonLink href="/register" name="Register" />
           </ButtonsContainerLog>
         </Description>
-        <TaskmateHomepage src="/img/Taskmate_Kafe.gif" alt="taskmate" />
+        <TaskmateHomepage
+          src="/img/Taskmate_Kafe.gif"
+          alt="taskmate"
+          width={300}
+          height={300}
+        />
       </Main>
     </>
   );
