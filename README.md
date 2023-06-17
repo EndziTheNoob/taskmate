@@ -1,5 +1,7 @@
 # FRONTEND OF TASKMATE
 
+Taskmate is a simple, clear and fun to-do list app that will help you manage tasks easily. An environment with a vibe of pixel art and a little helper for motivation or entertainment will make your day up.
+
 ## 💻 BUILD WITH
 
 - [Next.js](https://nextjs.org/), [React](https://react.dev/),
