@@ -28,6 +28,7 @@ export const InputStyle = styled.input`
   height: 4rem;
   font-family: var(--font-mono);
   margin: 1rem;
+  outline: none;
 `;
 
 export const ButtonStyle = styled.button`
