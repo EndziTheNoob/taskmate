@@ -4,9 +4,13 @@ import AuthForm from '@/components/AuthForm';
 export default function RegisterForm() {
   const onSubmit = async (data) => {
     try {
-      await signUp(data.email, data.password).then(() =>
+      const { error } = await signUp(data.email, data.password).then(() =>
         signIn(data.email, data.password),
       );
+      if (error) {
+        console.log(error);
+        return;
+      }
 
       // Přesměrujte na stránku "setting"
       window.location.href = '/setting';
