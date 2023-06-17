@@ -1,14 +1,17 @@
 import { signIn, signUp } from '../services/user';
 import AuthForm from '@/components/AuthForm';
+import { useState } from 'react';
 
 export default function RegisterForm() {
+  const [errorEmail, setErrorEmail] = useState('');
   const onSubmit = async (data) => {
     try {
       const { error } = await signUp(data.email, data.password).then(() =>
         signIn(data.email, data.password),
       );
       if (error) {
-        console.log(error);
+        console.log('email je registrovan');
+        setErrorEmail('The email is already registered.');
         return;
       }
 
@@ -20,6 +23,10 @@ export default function RegisterForm() {
   };
 
   return (
-    <AuthForm onSubmit={onSubmit} passwordLabel={'Create your password:'} />
+    <AuthForm
+      onSubmit={onSubmit}
+      passwordLabel={'Create your password:'}
+      errorEmail={errorEmail}
+    />
   );
 }

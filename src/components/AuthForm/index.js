@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { authSchema } from '@/utils/authSchema';
 import { ButtonStyle, FormStyle, Label, InputStyle } from '@/styles/Register';
 
-const AuthForm = ({ onSubmit, passwordLabel, errorMessage }) => {
+const AuthForm = ({ onSubmit, passwordLabel, errorMessage,errorEmail }) => {
   const {
     register,
     handleSubmit,
@@ -22,6 +22,7 @@ const AuthForm = ({ onSubmit, passwordLabel, errorMessage }) => {
         required
       />
       {errors.email && <p>{errors.email.message.toString()}</p>}
+      {errorEmail && <p>{errorEmail}</p>}
       <Label>{passwordLabel}</Label>
       <InputStyle
         type="password"
