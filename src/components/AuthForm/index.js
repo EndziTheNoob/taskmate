@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { authSchema } from '@/utils/authSchema';
 import { ButtonStyle, FormStyle, Label, InputStyle } from '@/styles/Register';
 
-const AuthForm = ({ onSubmit, passwordLabel }) => {
+const AuthForm = ({ onSubmit, passwordLabel, errorMessage }) => {
   const {
     register,
     handleSubmit,
@@ -30,8 +30,10 @@ const AuthForm = ({ onSubmit, passwordLabel }) => {
         required
       />
       {errors.password && <p>{errors.password.message.toString()}</p>}
+      {errorMessage && <p>{errorMessage}</p>}
       <ButtonStyle type="submit">Submit</ButtonStyle>
     </FormStyle>
   );
 };
+
 export default AuthForm;
