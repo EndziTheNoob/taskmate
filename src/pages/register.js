@@ -36,6 +36,7 @@ export default function RegisterForm() {
   };
 
   return (
+    // @ts-ignore
     <AuthForm
       onSubmit={onSubmit}
       passwordLabel={'Create your password:'}

@@ -9,7 +9,7 @@ export default function LoginForm() {
     if (errorMessage) {
       const timer = setTimeout(() => {
         setErrorMessage('');
-      }, 5000); 
+      }, 5000);
 
       return () => {
         clearTimeout(timer);
@@ -34,6 +34,7 @@ export default function LoginForm() {
   };
 
   return (
+    // @ts-ignore
     <AuthForm
       onSubmit={onSubmit}
       passwordLabel={'Password:'}
