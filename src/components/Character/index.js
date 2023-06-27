@@ -10,39 +10,17 @@ function animationReducer(state, action) {
   switch (action) {
     case 'Arrival':
       return (
-        <TaskmateArrival
-          src="/img/Taskmate_Chuze_Basic.gif"
-          alt="taskmate2"
-          width={300}
-          height={300}
-        />
+        <TaskmateArrival src="/img/Taskmate_Chuze_Basic.gif" alt="taskmate2" />
       );
     case 'Talking':
-      return (
-        <TaskmateTalking
-          src="/img/Taskmate_Kafe.gif"
-          alt="taskmate2"
-          width={300}
-          height={300}
-        />
-      );
+      return <TaskmateTalking src="/img/Taskmate_Kafe.gif" alt="taskmate2" />;
     case 'Hair':
       return (
-        <TaskmateTalking
-          src="/img/Taskmate_Hair_Basic.gif"
-          alt="taskmate2"
-          width={300}
-          height={300}
-        />
+        <TaskmateTalking src="/img/Taskmate_Hair_Basic.gif" alt="taskmate2" />
       );
     case 'Leaving':
       return (
-        <TaskmateLeaving
-          src="/img/Taskmate_Chuze_Basic.gif"
-          alt="taskmate2"
-          width={300}
-          height={300}
-        />
+        <TaskmateLeaving src="/img/Taskmate_Chuze_Basic.gif" alt="taskmate2" />
       );
     default:
       return state;
