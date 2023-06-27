@@ -29,7 +29,6 @@ export const ButtonStyle = styled.div`
     font-family: 'Krona One';
     @media (max-width: 768px) {
       font-size: 0.8rem;
-      margin-bottom: 4rem;
     }
   }
 
