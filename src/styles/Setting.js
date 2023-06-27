@@ -32,6 +32,10 @@ export const TaskmateSetting = styled.img`
   bottom: 2rem;
   left: 20rem;
   z-index: 1;
+  @media (max-width: 767px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const ButtonStyled = styled.button`

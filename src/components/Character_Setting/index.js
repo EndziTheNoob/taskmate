@@ -12,31 +12,12 @@ import {
 function animationReducer(state, action) {
   switch (action) {
     case 'Fly':
-      return (
-        <TaskmateFly
-          src="/img/Taskmate_Fly.gif"
-          alt="taskmate2"
-          width={360}
-          height={360}
-        />
-      );
+      return <TaskmateFly src="/img/Taskmate_Fly.gif" alt="taskmate2" />;
     case 'Drop':
-      return (
-        <TaskmateDrop
-          src="/img/Taskmate_Drop.gif"
-          alt="taskmate3"
-          width={360}
-          height={360}
-        />
-      );
+      return <TaskmateDrop src="/img/Taskmate_Drop.gif" alt="taskmate3" />;
     case 'Hair':
       return (
-        <TaskmateTalking
-          src="/img/Taskmate_Hair_Basic.gif"
-          alt="taskmate4"
-          width={300}
-          height={300}
-        />
+        <TaskmateTalking src="/img/Taskmate_Hair_Basic.gif" alt="taskmate4" />
       );
     default:
       return state;
