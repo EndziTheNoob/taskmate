@@ -24,7 +24,7 @@ export const Description = styled.div`
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
-  @media (max-width: 390px) {
+  @media (max-width: 767px) {
     font-size: 1rem;
   }
 
@@ -49,7 +49,7 @@ export const TaskmateHomepage = styled.img`
   z-index: 1;
   width: 300px;
   height: 300px;
-  @media (max-width: 390px) {
+  @media (max-width: 767px) {
     width: 200px;
     height: 200px;
     left: -0.5rem;
@@ -62,7 +62,7 @@ export const ButtonsContainerLog = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  @media (max-width: 390px) {
+  @media (max-width: 767px) {
     margin-top: 1rem;
   }
 `;
