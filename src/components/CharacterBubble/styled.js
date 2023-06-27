@@ -36,4 +36,8 @@ export const BubbleContent = styled.div`
   margin-left: 2rem;
   text-align: center;
   z-index: 1;
+  @media (max-width: 768px) {
+    margin-left: 0rem;
+    margin-right: 2rem;
+  }
 `;

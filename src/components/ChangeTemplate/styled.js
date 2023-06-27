@@ -7,6 +7,9 @@ export const Container = styled.div`
   flex-direction: column;
   text-align: center;
   margin-top: -10rem;
+  @media (max-width: 768px) {
+    margin-top: -16rem;
+  }
 `;
 
 export const Colors = styled.div`
