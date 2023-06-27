@@ -47,9 +47,12 @@ export const TaskmateHomepage = styled.img`
   bottom: 2rem;
   left: 2rem;
   z-index: 1;
+  width: 300px;
+  height: 300px;
   @media (max-width: 375px) {
     width: 200px;
     height: 200px;
+    left: -0.5rem;
   }
 `;
 
@@ -59,4 +62,7 @@ export const ButtonsContainerLog = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  @media (max-width: 375px) {
+    margin-top: 1rem;
+  }
 `;

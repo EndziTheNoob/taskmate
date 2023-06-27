@@ -27,6 +27,13 @@ export const ButtonStyle = styled.div`
   a {
     font-size: 1rem;
     font-family: 'Krona One';
+    @media (max-width: 375px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    width: 8rem;
   }
 `;
 
