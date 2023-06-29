@@ -24,7 +24,6 @@ export default function Home() {
           property="og:description"
           content="Simple, clear and fun to-do list that will help you manage tasks easily with a touch of pixel art. Are you ready?"
         />
-        <meta property="og:image" content="../public/img/preview.png" />
         <meta
           property="og:url"
           content="https://taskmate-project.vercel.app/"
