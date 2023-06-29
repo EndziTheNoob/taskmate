@@ -25,6 +25,10 @@ export default function Home() {
           content="Simple, clear and fun to-do list that will help you manage tasks easily with a touch of pixel art. Are you ready?"
         />
         <meta
+          property="og:image"
+          content={'https://taskmate-project.vercel.app/img/Taskmate_Kafe.gif'}
+        />
+        <meta
           property="og:url"
           content="https://taskmate-project.vercel.app/"
         />
