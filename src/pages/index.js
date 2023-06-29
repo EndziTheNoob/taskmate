@@ -20,6 +20,15 @@ export default function Home() {
       <Head>
         <title>TaskMate</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          property="og:description"
+          content="Simple, clear and fun to-do list that will help you manage tasks easily with a touch of pixel art. Are you ready?"
+        />
+        <meta property="og:image" content="../public/img/preview.png" />
+        <meta
+          property="og:url"
+          content="https://taskmate-project.vercel.app/"
+        />
       </Head>
       <Main>
         <Description>
