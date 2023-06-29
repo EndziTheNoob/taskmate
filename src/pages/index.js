@@ -26,7 +26,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content={'https://taskmate-project.vercel.app/img/Taskmate_Kafe.gif'}
+          content={'https://taskmate-project.vercel.app/preview.png'}
         />
         <meta
           property="og:url"
